@@ -1,0 +1,58 @@
+\chapter{Desenvolvimento}
+% ---
+Neste capitulo você deve explicar o que fez, seu sistema/protótipo/etc... Título livre.\newline 
+
+Este capítulo possui também exemplos de como inserir código no texto.
+% ---
+\section{Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+posuere cubilia Curae}
+% ---
+
+\lipsum[21-22]
+
+\section{Inserindo código no texto}
+
+Abaixo são apresentados exemplos de códigos inseridos no texto usando o pacote listings.
+
+%Inserindo código diretamente no texto
+\begin{lstlisting}[language=c, caption={Exemplo de código C}, upquote=true]
+#include <stdio.h>
+
+int main(int argc, const char * argv[]) {
+struct pessoa{
+char nome[20];
+char sobreNome[20];
+unsigned short idade;
+char cpf[15];
+}p1;
+//struct pessoa p1;
+
+printf("Digite o nome: ");
+scanf("%s",p1.nome);
+printf("Digite o sobrenome: ");
+scanf("%s",p1.sobreNome);
+printf("Digite a idade: ");
+scanf("%hu",&p1.idade);
+printf("Digite o CPF: ");
+scanf("%s",p1.cpf);
+
+printf("\nO nome da pessoa eh: %s", p1.nome);
+printf("\nO sobrenome da pessoa eh: %s", p1.sobreNome);
+printf("\nA idade da pessoa eh: %d", p1.idade);
+printf("\nO CPF da pessoa eh: %s\n", p1.cpf);
+}
+\end{lstlisting}
+
+\lipsum[1]
+
+%Ao invés de inserir código diretamente no texto, é recomendável importar um arquivo com o código
+
+%Importanto arquivo de código
+\lstinputlisting[language=Java,caption={Exemplo de código java}]{codigos/Minhaclasse.java}
+
+O método abaixo mostra a string mensagem recebida como parametro e retorna um inteiro digitado pelo usuario. Através de tratamento de exceções, o método executará até que o usuário digite um inteiro válido.
+
+%Para inserir apenas algumas linhas do arquivo
+\lstinputlisting[language=Java, caption={Método LerInteiro}, firstline=39, lastline=54]{codigos/Ferramentas.java}
+
+\lipsum[2-3]
