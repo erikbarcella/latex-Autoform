@@ -17,30 +17,28 @@ manter diversos processos administrativos que abrangem uma variedade de assuntos
 
 Portanto um dos processos administrativos mantidos pela corporação é a geração do AEL, onde atualmente esta tarefa é realizada pelos seus operadores de forma manual preenchendo os dados necessários em um arquivo de texto, seguido da formatação e adequação do documento ao modelo padrão estabelecido pelo Exército Brasileiro, que possui regras específicas de indexação das informações conforme especificado no manual de preenchimento do arquivo eletrônico conforme (anexo \ref{sec:anexoA1})   
 
-Após a geração do arquivo eletrônico , o mesmo é submetido para avaliação da Diretoria de Fiscalização de Produtos Controlados do Exército e caso validado é registrado no SIGMA\cite{ExércitoBrasileiro}
+Após a geração do arquivo eletrônico, o mesmo é submetido para avaliação da Diretoria de Fiscalização de Produtos Controlados do Exército, que irá validar as informações contidas no arquivo e em caso de sucesso será registrado no SIGMA\cite{ExércitoBrasileiro}
 
-Portanto a proposta deste trabalho é desenvolver uma aplicação web que automatize o processo de geração do AEL, onde o operador irá preencher os dados necessários em um formulário web, e após a submissão do mesmo, o sistema irá gerar o arquivo eletrônico no formato especificado pelo Exército Brasileiro, e por fim o operador irá submeter o arquivo eletrônico para avaliação da Diretoria de Fiscalização de Produtos Controlados do Exército.
+Entretanto no momento atual o AEL é formatado manualmente pelo operador após o preenchimento, implicando em uma maior complexidade na execução dessa tarefa,sendo assim a proposta deste trabalho é desenvolver uma aplicação web que automatize o processo de geração do arquivo eletrônico visando simplificar significativamente o procedimento, através do preenchimento facilitado proporcionando resultados mais eficazes e alavancando a excelência operacional da instituição
 
-Ao adotar essa ferramenta, espera-se obter maior eficiência, confiabilidade e alinhamento com as 
-exigências do Exército Brasileiro. Embora ainda não tenhamos detalhado a ferramenta específica neste projeto,
-é importante destacar que sua implementação visa otimizar os procedimentos administrativos da Brigada Militar, 
-proporcionando resultados mais eficazes e alavancando a excelência operacional da instituição.
-Atualmente, na Brigada Militar do Rio Grande do Sul, o setor interno é responsável por controlar e 
-manter diversos processos administrativos, inclusive interligados a outros órgãos públicos. 
-Um dos desafios enfrentados pelos operadores que realizam esta atividade é a digitação manual de dados em um 
-arquivo de texto, chamado DataList, seguido pela formatação e adequação do documento ao modelo padrão 
-estabelecido pelo Exército Brasileiro, que possui regras específicas de indexação das informações
-Para aprimorar a eficiência -nesse processo.
-\index{citações!diretas}Utilize o ambiente \texttt{citacao} para incluir
-citações diretas com mais de três linhas:
-\begin{citacao}
-motivação em simplificar e melhorar os fluxos de trabalho, levar a reduzir custos operacionais e implementar novas aplicações mais rápidas através da automação, programação e gestão das transferências de arquivo\cite[5.3]{AndradeJunior}
-\end{citacao}
 
 \section{Justificativa}
 
+A divisão interna da BM RS desempenha o papel crucial de supervisionar e gerir uma série de procedimentos administrativos que abrangem uma ampla gama de assuntos relacionados às atividades e operações da instituição militar. \cite{bmDepartamentoAdministrativo}
+
+Uma das atividades administrativas sob a responsabilidade da corporação é registrar e manter atualizado o cadastro, transferência de armas de fogo e demais produtos regulados sob a jurisdição do Comando do Exército no estado do Rio Grande do Sul, através do envio de documento eletrônico para a DFPC destinado a registrar no SIGMA.\cite{ExércitoBrasileiro}
+
+Neste momento, a execução dessa atividade é realizada de forma manual por operadores da BM RS, os quais inserem os dados essenciais em um documento de texto. Além, de precederem com a formatação do documento de acordo com as diretrizes estipuladas pelo Exército Brasileiro, que estabelece regras específicas para a indexação das informações, conforme minuciosamente delineado no manual de preenchimento do arquivo eletrônico (anexo \ref{sec:anexoA4})   
+
+Nesse sentido, foi estipulado o desenvolvimento uma aplicação digital afim de simplificar notavelmente o processo de preenchimento e geração do AEL na Brigada Militar, afim de que esta plataforma contribua de maneira eficiente e decisiva.
+\begin{citacao}
+    motivação em simplificar e melhorar os fluxos de trabalho, levar a reduzir custos operacionais e implementar novas aplicações mais rápidas através da automação, programação e gestão das transferências de arquivo\cite{AndradeJunior}
+    \end{citacao}
+
 \section{Objetivos}
+Os objetivos esperados são apresentados nesta abaixo , dividos em gerais e específicos 
 
 \subsection{Objetivos Gerais}
+Otimizar o fluxo de geração do AEL, através da aplicação web , permitindo manter organizado 
 
 \subsection{Objetivos específicos}
