@@ -26,149 +26,163 @@
  
 \chapter{Referencial Teórico}\label{referecial_teorico}
 % ---
-\section{AEL} 
-Diário oficial da união Nº 245, quinta-feira, 19 de dezembro de 2019
-\section{Gerenciamento de processos}
+\section{Sistema SIGMA } 
+O Sistema de Gerenciamento Militar de Armas (SIGMA) é um sistema computacional desenvolvido pelo Exército Brasileiro para o controle de armas de fogo, munições e demais produtos controlados. O sistema foi implantado em 2002 e vem sendo constantemente atualizado para atender às necessidades da Força.
 
-\section{BPMN}
+\subsection{Contexto de implantação}
+O contexto da implantação do SIGMA foi a necessidade de modernizar o sistema de controle de armas de fogo e munições do Exército Brasileiro. O sistema anterior, o Sistema de Controle de Produtos Controlados (SICOP), era considerado obsoleto e não atendia às necessidades da Força.
+O SIGMA foi desenvolvido com base nas melhores práticas internacionais de controle de armas de fogo. O sistema é integrado a outros sistemas de informação do Exército Brasileiro, o que permite a troca de dados e informações entre as diferentes áreas da Força.\cite{ExércitoBrasileiro}
+
+\subsection{Arquivo AEL}
+O Arquivo Eletrônico em Lote (AEL) é um arquivo de dados que deve ser gerado pela Brigada Militar para o cadastro de armas de fogo no SIGMA. O arquivo deve conter as seguintes informações:
+\begin{itemize}
+    \item Identificação da Brigada Militar: número do QG, código da OM e nome da OM.
+    \item Identificação do armamento: número da arma, tipo de arma, marca, modelo, calibre e série.
+    \item Identificação do proprietário: nome completo, CPF, RG, endereço e telefone.
+\end{itemize}\cite{ExércitoBrasileiro}
+
+O AEL deve ser gerado em um formato texto e deve seguir um layout pré-definido.\cite{ebInstrucaoAdministrativa} 
+\section{Gerenciamento de processos}
+É uma abordagem disciplinada e sistemática que envolve práticas relacionadas aos processos de negócio, automatizados ou não, com o objetivo de alcançar resultados consistentes e alinhados com as metas estratégicas de uma organização. Pode-se concluir que os sistemas de informação oferecem inúmeros benefícios para uma organização, sejam eles para melhorar o fluxo de informação, as tomadas decisões, controle de qualidade, ou ampliar a produtividade
+
+\subsection{BPMN}
+Business Process Model and Notation é uma notação gráfica padronizada para desenhar processos de negócios em um fluxograma. A diagramação BPMN é intuitiva e permite a representação de detalhes complexos do processo. A simbologia BPMN serve como uma linguagem padrão, colocando um fim na lacuna de comunicação entre a modelagem do processo e sua execução, conforme GONÇALVES, J. E. S. (2013) ''Compreende o levantamento e o registro da situação atual dos processos organizacionais, descrevendo fluxos, insumos e demais informações necessárias ao entendimento uniforme dos processos por todos os envolvidos. O objetivo da análise de processos é criar um entendimento das atividades do processo e medir o sucesso dessas atividades no alcance dos objetivos''.
+
+\section{Sistemas Web}
+
+\section{JavaScript}
+Uma linguagem de programação amplamente usada no desenvolvimento web. Ela permite adicionar interatividade e dinamismo a páginas da web. Além de ser usado no desenvolvimento front-end, o JavaScript também pode ser usado no desenvolvimento de aplicativos do lado do servidor (backend) com o uso de tecnologias como o Node.js. HTML, para especificar o conteúdo de páginas Web, CSS, para especificar a apresentação dessas páginas, e JavaScript, para especificar o comportamento delas. ( FLANAGAN, DAVID, 2013) 
+
+
+\section{Padrões de desenvolvimento}
+
+\subsection{Arquitetura Cliente Servidor}
+Amplamente utilizado em sistemas de computação distribuída. Nessa arquitetura, o software é dividido em duas partes principais: o cliente e o servidor.
+O cliente é a parte do sistema que interage diretamente com o usuário. Ele envia solicitações de serviço ao servidor e exibe os resultados recebidos ao usuário. O cliente pode ser um aplicativo de desktop, um aplicativo móvel ou um navegador da web, dependendo do tipo de sistema que está sendo desenvolvido.
+O servidor é responsável por processar as solicitações recebidas do cliente e fornecer os recursos ou serviços solicitados. Ele possui os recursos necessários para atender às solicitações, como bancos de dados, aplicativos e serviços web. O servidor está sempre ativo, aguardando solicitações dos clientes e respondendo a elas de maneira apropriada.
+A comunicação entre o cliente e o servidor ocorre por meio de uma rede, geralmente a Internet. O cliente envia uma solicitação para o servidor, especificando o tipo de serviço desejado e quaisquer parâmetros necessários. O servidor processa a solicitação, executa as ações necessárias e envia a resposta de volta ao cliente. Essa comunicação pode ser baseada em diferentes protocolos, como HTTP, TCP/IP ou UDP.
+Uma das principais vantagens da arquitetura cliente-servidor é a divisão clara de responsabilidades entre o cliente e o servidor. O cliente lida com a interface do usuário e a apresentação dos dados, enquanto o servidor cuida do processamento das solicitações e do acesso aos recursos. Isso permite uma melhor organização do sistema e facilita a manutenção e a escalabilidade.
+Além disso, a arquitetura cliente-servidor permite que vários clientes acessem o mesmo servidor simultaneamente. Isso possibilita o compartilhamento de recursos e serviços, o que é especialmente útil em sistemas distribuídos e ambientes empresariais.
+
+\subsection{Arquitetura MVC}
+
+\section{Frameworks}
+
+\section{Backend}
+É a parte de um sistema ou aplicação que lida com a lógica de negócios, processamento de dados e a comunicação com o banco de dados. Envolve a criação de servidores, APIs (Application Programming Interfaces) e serviços que fornecem os dados e funcionalidades necessárias para o funcionamento do sistema. Para o desenvolvimento backend, são utilizadas diversas tecnologias, como linguagens de programação (como JavaScript, Python, Java, etc.), bancos de dados (como MySQL, PostgreSQL, MongoDB, etc.) e frameworks (como Node.js, Django, Ruby on Rails, etc.). Então o backend deve ser capaz de servir ao front-end a comunicação em tempo real entre cliente e servidor — que seja rápido, atenda muitos usuários ao mesmo tempo e utilize recursos de I/O (dispositivos de entrada ou saída) de forma eficiente ( RIBEIRO, CAIO , 2013)
+
+\subsection{Apis Restful}
+
+\subsection{Node}
+O node é um ambiente de tempo de execução JavaScript que permite que o JavaScript seja executado no lado do servidor. Ele usa o mecanismo de JavaScript V8 do Google Chrome para executar código JavaScript fora do navegador. Com o Node.js, é possível criar aplicativos web e serviços backend usando JavaScript. Ele fornece uma variedade de recursos e uma ampla gama de bibliotecas e frameworks, tornando-o uma escolha popular para o desenvolvimento de servidores e APIs. Conforme aborda  ( RIBEIRO, CAIO , 2013) “Node.js é multiprotocolo, ou seja, com ele será possível trabalhar com os protocolos: HTTP, HTTPS, FTP, SSH, DNS, TCP, UDP, WebSockets e também existem outros.  Toda aplicação web necessita de um servidor para disponibilizar todos os seus  recursos”
+
+\subsubsection{Express}
+Framework para aplicativos web do lado do servidor construído em cima do Node.js. Ele fornece uma abordagem simplificada para lidar com solicitações HTTP, roteamento e manipulação de middleware. O Express permite criar facilmente APIs robustas e eficientes, tornando o desenvolvimento de aplicativos web mais rápido e produtivo. É um dos frameworks mais populares para o desenvolvimento de servidores com Node.js.
+
+\subsection{Segurança e autenticação}
+
+\subsubsection{Passport-Local}
+O Passport-local é uma estratégia de autenticação fornecida pelo Passport.js para autenticar usuários usando um nome de usuário e senha em aplicativos Node.js. Ele é facilmente integrado a qualquer aplicativo ou framework que suporte middlewares do estilo Connect, incluindo o Express. O Passport-local requer um retorno de chamada de verificação que valida as credenciais do usuário. Ele pode ser configurado para realizar a autenticação localmente, verificando o nome de usuário e a senha no banco de dados do aplicativo. 
+
+\subsubsection{Token JWT}
+
+
+
+\section{Banco de dados NOSQL}
+Banco de dados NoSQL é um tipo de banco de dados que difere dos bancos de dados relacionais tradicionais (SQL) em sua estrutura de armazenamento e modelo de dados. NoSQL significa "Not Only SQL" (Não Apenas SQL) e abrange diversos tipos de bancos de dados que oferecem uma abordagem alternativa para o armazenamento e recuperação de dados.
+MongoDB é um exemplo popular de banco de dados NoSQL. Ele é um sistema de gerenciamento de banco de dados orientado a documentos, o que significa que os dados são armazenados em documentos semelhantes a JSON, em vez de tabelas com linhas e colunas como em um banco de dados relacional.
+
+Uma das principais vantagens do MongoDB é sua flexibilidade no esquema de dados. Ao contrário dos bancos de dados relacionais, o MongoDB não exige um esquema fixo, o que significa que cada documento pode ter uma estrutura diferente. Isso permite uma maior agilidade no desenvolvimento, especialmente em projetos que envolvem dados não estruturados ou que precisam se adaptar facilmente a mudanças nos requisitos.
+Outra característica importante do MongoDB é sua capacidade de escalar horizontalmente. Ele permite a distribuição dos dados em vários servidores, possibilitando o aumento da capacidade de armazenamento e do desempenho do banco de dados conforme a demanda cresce.
+Além disso, o MongoDB oferece recursos avançados, como indexação, consultas poderosas e suporte a transações, tornando-o adequado para uma ampla gama de aplicações. É frequentemente utilizado em aplicativos web, análise de dados, IoT (Internet das Coisas) e outras aplicações que exigem flexibilidade e escalabilidade.
+
+\subsection{CRUD}
+É um acrônimo que representa as quatro principais operações relacionadas a dados: Create (criação), Read (leitura), Update (atualização) e Delete (exclusão). Essas operações são fundamentais para qualquer sistema que lide com a persistência de dados, como bancos de dados. O CRUD permite a manipulação completa dos dados, desde a criação de novos registros até a exclusão ou atualização dos existentes. É uma abordagem comum no desenvolvimento de sistemas web e é suportada por várias tecnologias e frameworks.  precisa ter como requisito mínimo um meio de permitir o usuário criar, listar, atualizar e excluir informações. Esse é o conjunto clássico de funcionalidades ( RIBEIRO, CAIO , 2013)
+
+\subsection{MongoDB e Mongoose}
+
 
 \section{Frontend}
-\section{Backend}
-\section{Arquitetura Cliente Servidor}
-\section{Arquitetura MVC}
-\section{Apis Restful}
-\section{CRUD}
-\section{JavaScript}
-\section{Banco de dados NOSQL e MongoDB}
-\section{Frameworks}
-\section{Node}
-\section{Express}
-\section{Autenticação - Passport Local e JWT}
-\section{React}
+É a parte de um sistema ou aplicação que os usuários interagem diretamente. Envolve a criação da interface do usuário, a implementação de elementos visuais, como layout, design, botões, formulários, etc., e a interação com o usuário por meio de eventos e ações. Para o desenvolvimento front-end, são utilizadas tecnologias como HTML (Hypertext Markup Language), CSS (Cascading Style Sheets) e JavaScript. Todo o HTML e o CSS que escrevemos ganha vida dentro dos navegadores utilizados por quem acessa nossas páginas e sites (MAZZA LUCAS, 2012)
+
+\subsection{React}
+React é uma biblioteca JavaScript de código aberto usada para criar interfaces de usuário. Ele permite criar componentes reutilizáveis e interativos para construir interfaces de usuário modernas e responsivas.  Você pode criar aplicações nativas com desempenho e controles
+nativos ''controles realmente nativos, e não cópias com aparência nativa'' usando as mesmas ideias de construção de componentes e Uis". (Stoyan Stefanov editora Novatec 2019).
+O React usa uma abordagem baseada em componentes, o que facilita a criação e o gerenciamento do estado dos elementos da interface. Ele também permite a criação de aplicativos de página única (SPAs) eficientes e escaláveis. O React é frequentemente combinado com outras bibliotecas e frameworks, como o Redux, para gerenciar o estado global do aplicativo. 
+
+\subsection{HTML}
+(HyperText Markup Language) é a linguagem de marcação usada para estruturar e exibir o conteúdo de uma página da web. Ele fornece uma estrutura básica para a criação de elementos, como cabeçalhos, parágrafos, listas, links e imagens. O HTML é a espinha dorsal de qualquer página da web e é complementado por CSS e JavaScript para fornecer estilos e interatividade.
+
+\subsection{CSS}
+CSS (Cascading Style Sheets) é uma linguagem usada para estilizar a aparência dos elementos em uma página da web. Ele permite controlar cores, fontes, margens, posicionamento e outros aspectos visuais dos elementos HTML. O CSS é usado em conjunto com o HTML para criar layouts atraentes e responsivos. Ele oferece flexibilidade para personalizar o estilo de um site e torná-lo visualmente agradável para os usuários. 
 % ---
 
-A codificação de todos os arquivos do \abnTeX\ é \texttt{UTF8}. É necessário que
-você utilize a mesma codificação nos documentos que escrever, inclusive nos
-arquivos de base bibliográficas |.bib|.
+% A codificação de todos os arquivos do \abnTeX\ é \texttt{UTF8}. É necessário que
+% você utilize a mesma codificação nos documentos que escrever, inclusive nos
+% arquivos de base bibliográficas |.bib|.
 
-% ---
-\section{Citações diretas}
-\label{sec-citacao}
-% ---
+% % ---
+% \section{Citações diretas}
+% \label{sec-citacao}
+% % ---
 
-\index{citações!diretas}Utilize o ambiente \texttt{citacao} para incluir
-citações diretas com mais de três linhas:
+% \index{citações!diretas}Utilize o ambiente \texttt{citacao} para incluir
+% citações diretas com mais de três linhas:
 
-\begin{citacao}
-As citações diretas, no texto, com mais de três linhas, devem ser
-destacadas com recuo de 4 cm da margem esquerda, com letra menor que a do texto
-utilizado e sem as aspas. No caso de documentos datilografados, deve-se
-observar apenas o recuo \cite[5.3]{NBR10520:2002}.
-\end{citacao}
+% \begin{citacao}
+% As citações diretas, no texto, com mais de três linhas, devem ser
+% destacadas com recuo de 4 cm da margem esquerda, com letra menor que a do texto
+% utilizado e sem as aspas. No caso de documentos datilografados, deve-se
+% observar apenas o recuo \cite[5.3]{NBR10520:2002}.
+% \end{citacao}
 
-Use o ambiente assim:
+% Use o ambiente assim:
 
-\begin{verbatim}
-\begin{citacao}
-As citações diretas, no texto, com mais de três linhas [...] deve-se observar
-apenas o recuo \cite[5.3]{NBR10520:2002}.
-\end{citacao}
-\end{verbatim}
+% \begin{verbatim}
+% \begin{citacao}
+% As citações diretas, no texto, com mais de três linhas [...] deve-se observar
+% apenas o recuo \cite[5.3]{NBR10520:2002}.
+% \end{citacao}
+% \end{verbatim}
 
-O ambiente \texttt{citacao} pode receber como parâmetro opcional um nome de
-idioma previamente carregado nas opções da classe (\autoref{sec-hifenizacao}). Nesse
-caso, o texto da citação é automaticamente escrito em itálico e a hifenização é
-ajustada para o idioma selecionado na opção do ambiente. Por exemplo:
+% O ambiente \texttt{citacao} pode receber como parâmetro opcional um nome de
+% idioma previamente carregado nas opções da classe (\autoref{sec-hifenizacao}). Nesse
+% caso, o texto da citação é automaticamente escrito em itálico e a hifenização é
+% ajustada para o idioma selecionado na opção do ambiente. Por exemplo:
 
-\begin{verbatim}
-\begin{citacao}[english]
-Text in English language in italic with correct hyphenation.
-\end{citacao}
-\end{verbatim}
+% \begin{verbatim}
+% \begin{citacao}[english]
+% Text in English language in italic with correct hyphenation.
+% \end{citacao}
+% \end{verbatim}
 
-Tem como resultado:
+% Tem como resultado:
 
-\begin{citacao}[english]
-Text in English language in italic with correct hyphenation.
-\end{citacao}
+% \begin{citacao}[english]
+% Text in English language in italic with correct hyphenation.
+% \end{citacao}
 
-\index{citações!simples}Citações simples, com até três linhas, devem ser
-incluídas com aspas. Observe que em \LaTeX as aspas iniciais são diferentes das
-finais: ``Amor é fogo que arde sem se ver''.
+% \index{citações!simples}Citações simples, com até três linhas, devem ser
+% incluídas com aspas. Observe que em \LaTeX as aspas iniciais são diferentes das
+% finais: ``Amor é fogo que arde sem se ver''.
 
-% ---
-\section{Notas de rodapé}
-% ---
+% % ---
+% \section{Notas de rodapé}
+% % ---
 
-As notas de rodapé são detalhadas pela NBR 14724:2011 na seção 5.2.1\footnote{As
-notas devem ser digitadas ou datilografadas dentro das margens, ficando
-separadas do texto por um espaço simples de entre as linhas e por filete de 5
-cm, a partir da margem esquerda. Devem ser alinhadas, a partir da segunda linha
-da mesma nota, abaixo da primeira letra da primeira palavra, de forma a destacar
-o expoente, sem espaço entre elas e com fonte menor
-\citeonline[5.2.1]{NBR14724:2011}.}\footnote{Caso uma série de notas sejam
-criadas sequencialmente, o \abnTeX\ instrui o \LaTeX\ para que uma vírgula seja
-colocada após cada número do expoente que indica a nota de rodapé no corpo do
-texto.}\footnote{Verifique se os números do expoente possuem uma vírgula para
-dividi-los no corpo do texto.}. 
+% As notas de rodapé são detalhadas pela NBR 14724:2011 na seção 5.2.1\footnote{As
+% notas devem ser digitadas ou datilografadas dentro das margens, ficando
+% separadas do texto por um espaço simples de entre as linhas e por filete de 5
+% cm, a partir da margem esquerda. Devem ser alinhadas, a partir da segunda linha
+% da mesma nota, abaixo da primeira letra da primeira palavra, de forma a destacar
+% o expoente, sem espaço entre elas e com fonte menor
+% \citeonline[5.2.1]{NBR14724:2011}.}\footnote{Caso uma série de notas sejam
+% criadas sequencialmente, o \abnTeX\ instrui o \LaTeX\ para que uma vírgula seja
+% colocada após cada número do expoente que indica a nota de rodapé no corpo do
+% texto.}\footnote{Verifique se os números do expoente possuem uma vírgula para
+% dividi-los no corpo do texto.}. 
 
 
-% ---
-\section{Tabelas}
-% ---
-
-\index{tabelas}A \autoref{tab-nivinv} é um exemplo de tabela construída em
-\LaTeX.
-
-\begin{table}[htb]
-\ABNTEXfontereduzida
-\caption[Níveis de investigação]{Níveis de investigação.}
-\label{tab-nivinv}
-\begin{tabular}{p{2.6cm}|p{6.0cm}|p{2.25cm}|p{3.40cm}}
-  %\hline
-   \textbf{Nível de Investigação} & \textbf{Insumos}  & \textbf{Sistemas de Investigação}  & \textbf{Produtos}  \\
-    \hline
-    Meta-nível & Filosofia\index{filosofia} da Ciência  & Epistemologia &
-    Paradigma  \\
-    \hline
-    Nível do objeto & Paradigmas do metanível e evidências do nível inferior &
-    Ciência  & Teorias e modelos \\
-    \hline
-    Nível inferior & Modelos e métodos do nível do objeto e problemas do nível inferior & Prática & Solução de problemas  \\
-   % \hline
-\end{tabular}
-\legend{Fonte: \citeonline{van86}}
-\end{table}
-
-Já a \autoref{tabela-ibge} apresenta uma tabela criada conforme o padrão do
-\citeonline{ibge1993} requerido pelas normas da ABNT para documentos técnicos e
-acadêmicos.
-
-\begin{table}[htb]
-\IBGEtab{%
-  \caption{Um Exemplo de tabela alinhada que pode ser longa
-  ou curta, conforme padrão IBGE.}%
-  \label{tabela-ibge}
-}{%
-  \begin{tabular}{ccc}
-  \toprule
-   Nome & Nascimento & Documento \\
-  \midrule \midrule
-   Maria da Silva & 11/11/1111 & 111.111.111-11 \\
-  \midrule 
-   João Souza & 11/11/2111 & 211.111.111-11 \\
-  \midrule 
-   Laura Vicuña & 05/04/1891 & 3111.111.111-11 \\
-  \bottomrule
-\end{tabular}%
-}{%
-  \fonte{Produzido pelos autores.}%
-  \nota{Esta é uma nota, que diz que os dados são baseados na
-  regressão linear.}%
-  \nota[Anotações]{Uma anotação adicional, que pode ser seguida de várias
-  outras.}%
-  }
-\end{table}
 
 
 % ---
@@ -283,459 +297,459 @@ texto e inserida o mais próximo possível do trecho a que se
 refere. \cite[seções 5.8]{NBR14724:2011}
 \end{citacao}
 
-% ---
-\section{Expressões matemáticas}
-% ---
+% % ---
+% \section{Expressões matemáticas}
+% % ---
 
-\index{expressões matemáticas}Use o ambiente \texttt{equation} para escrever
-expressões matemáticas numeradas:
+% \index{expressões matemáticas}Use o ambiente \texttt{equation} para escrever
+% expressões matemáticas numeradas:
 
-\begin{equation}
-  \forall x \in X, \quad \exists \: y \leq \epsilon
-\end{equation}
+% \begin{equation}
+%   \forall x \in X, \quad \exists \: y \leq \epsilon
+% \end{equation}
 
-Escreva expressões matemáticas entre \$ e \$, como em $ \lim_{x \to \infty}
-\exp(-x) = 0 $, para que fiquem na mesma linha.
+% Escreva expressões matemáticas entre \$ e \$, como em $ \lim_{x \to \infty}
+% \exp(-x) = 0 $, para que fiquem na mesma linha.
 
-Também é possível usar colchetes para indicar o início de uma expressão
-matemática que não é numerada.
+% Também é possível usar colchetes para indicar o início de uma expressão
+% matemática que não é numerada.
 
-\[
-\left|\sum_{i=1}^n a_ib_i\right|
-\le
-\left(\sum_{i=1}^n a_i^2\right)^{1/2}
-\left(\sum_{i=1}^n b_i^2\right)^{1/2}
-\]
+% \[
+% \left|\sum_{i=1}^n a_ib_i\right|
+% \le
+% \left(\sum_{i=1}^n a_i^2\right)^{1/2}
+% \left(\sum_{i=1}^n b_i^2\right)^{1/2}
+% \]
 
-Consulte mais informações sobre expressões matemáticas em
-\url{https://github.com/abntex/abntex2/wiki/Referencias}.
+% Consulte mais informações sobre expressões matemáticas em
+% \url{https://github.com/abntex/abntex2/wiki/Referencias}.
 
-% ---
-\section{Enumerações: alíneas e subalíneas}
-% ---
+% % ---
+% \section{Enumerações: alíneas e subalíneas}
+% % ---
 
-\index{alíneas}\index{subalíneas}\index{incisos}Quando for necessário enumerar
-os diversos assuntos de uma seção que não possua título, esta deve ser
-subdividida em alíneas \cite[4.2]{NBR6024:2012}:
+% \index{alíneas}\index{subalíneas}\index{incisos}Quando for necessário enumerar
+% os diversos assuntos de uma seção que não possua título, esta deve ser
+% subdividida em alíneas \cite[4.2]{NBR6024:2012}:
 
-\begin{alineas}
+% \begin{alineas}
 
-  \item os diversos assuntos que não possuam título próprio, dentro de uma mesma
-  seção, devem ser subdivididos em alíneas; 
+%   \item os diversos assuntos que não possuam título próprio, dentro de uma mesma
+%   seção, devem ser subdivididos em alíneas; 
   
-  \item o texto que antecede as alíneas termina em dois pontos;
-  \item as alíneas devem ser indicadas alfabeticamente, em letra minúscula,
-  seguida de parêntese. Utilizam-se letras dobradas, quando esgotadas as
-  letras do alfabeto;
+%   \item o texto que antecede as alíneas termina em dois pontos;
+%   \item as alíneas devem ser indicadas alfabeticamente, em letra minúscula,
+%   seguida de parêntese. Utilizam-se letras dobradas, quando esgotadas as
+%   letras do alfabeto;
 
-  \item as letras indicativas das alíneas devem apresentar recuo em relação à
-  margem esquerda;
+%   \item as letras indicativas das alíneas devem apresentar recuo em relação à
+%   margem esquerda;
 
-  \item o texto da alínea deve começar por letra minúscula e terminar em
-  ponto-e-vírgula, exceto a última alínea que termina em ponto final;
+%   \item o texto da alínea deve começar por letra minúscula e terminar em
+%   ponto-e-vírgula, exceto a última alínea que termina em ponto final;
 
-  \item o texto da alínea deve terminar em dois pontos, se houver subalínea;
+%   \item o texto da alínea deve terminar em dois pontos, se houver subalínea;
 
-  \item a segunda e as seguintes linhas do texto da alínea começa sob a
-  primeira letra do texto da própria alínea;
+%   \item a segunda e as seguintes linhas do texto da alínea começa sob a
+%   primeira letra do texto da própria alínea;
   
-  \item subalíneas \cite[4.3]{NBR6024:2012} devem ser conforme as alíneas a
-  seguir:
+%   \item subalíneas \cite[4.3]{NBR6024:2012} devem ser conforme as alíneas a
+%   seguir:
 
-  \begin{alineas}
-     \item as subalíneas devem começar por travessão seguido de espaço;
+%   \begin{alineas}
+%      \item as subalíneas devem começar por travessão seguido de espaço;
 
-     \item as subalíneas devem apresentar recuo em relação à alínea;
+%      \item as subalíneas devem apresentar recuo em relação à alínea;
 
-     \item o texto da subalínea deve começar por letra minúscula e terminar em
-     ponto-e-vírgula. A última subalínea deve terminar em ponto final, se não
-     houver alínea subsequente;
+%      \item o texto da subalínea deve começar por letra minúscula e terminar em
+%      ponto-e-vírgula. A última subalínea deve terminar em ponto final, se não
+%      houver alínea subsequente;
 
-     \item a segunda e as seguintes linhas do texto da subalínea começam sob a
-     primeira letra do texto da própria subalínea.
-  \end{alineas}
+%      \item a segunda e as seguintes linhas do texto da subalínea começam sob a
+%      primeira letra do texto da própria subalínea.
+%   \end{alineas}
   
-  \item no \abnTeX\ estão disponíveis os ambientes \texttt{incisos} e
-  \texttt{subalineas}, que em suma são o mesmo que se criar outro nível de
-  \texttt{alineas}, como nos exemplos à seguir:
+%   \item no \abnTeX\ estão disponíveis os ambientes \texttt{incisos} e
+%   \texttt{subalineas}, que em suma são o mesmo que se criar outro nível de
+%   \texttt{alineas}, como nos exemplos à seguir:
   
-  \begin{incisos}
-    \item \textit{Um novo inciso em itálico};
-  \end{incisos}
+%   \begin{incisos}
+%     \item \textit{Um novo inciso em itálico};
+%   \end{incisos}
   
-  \item Alínea em \textbf{negrito}:
+%   \item Alínea em \textbf{negrito}:
   
-  \begin{subalineas}
-    \item \textit{Uma subalínea em itálico};
-    \item \underline{\textit{Uma subalínea em itálico e sublinhado}}; 
-  \end{subalineas}
+%   \begin{subalineas}
+%     \item \textit{Uma subalínea em itálico};
+%     \item \underline{\textit{Uma subalínea em itálico e sublinhado}}; 
+%   \end{subalineas}
   
-  \item Última alínea com \emph{ênfase}.
+%   \item Última alínea com \emph{ênfase}.
   
-\end{alineas}
-
-% ---
-\section{Espaçamento entre parágrafos e linhas}
-% ---
-
-\index{espaçamento!dos parágrafos}O tamanho do parágrafo, espaço entre a margem
-e o início da frase do parágrafo, é definido por:
-
-\begin{verbatim}
-   \setlength{\parindent}{1.3cm}
-\end{verbatim}
-
-\index{espaçamento!do primeiro parágrafo}Por padrão, não há espaçamento no
-primeiro parágrafo de cada início de divisão do documento
-(\autoref{sec-divisoes}). Porém, você pode definir que o primeiro parágrafo
-também seja indentado, como é o caso deste documento. Para isso, apenas inclua o
-pacote \textsf{indentfirst} no preâmbulo do documento:
-
-\begin{verbatim}
-   \usepackage{indentfirst}      % Indenta o primeiro parágrafo de cada seção.
-\end{verbatim}
-
-\index{espaçamento!entre os parágrafos}O espaçamento entre um parágrafo e outro
-pode ser controlado por meio do comando:
-
-\begin{verbatim}
-  \setlength{\parskip}{0.2cm}  % tente também \onelineskip
-\end{verbatim}
-
-\index{espaçamento!entre as linhas}O controle do espaçamento entre linhas é
-definido por:
-
-\begin{verbatim}
-  \OnehalfSpacing       % espaçamento um e meio (padrão); 
-  \DoubleSpacing        % espaçamento duplo
-  \SingleSpacing        % espaçamento simples	
-\end{verbatim}
-
-Para isso, também estão disponíveis os ambientes:
-
-\begin{verbatim}
-  \begin{SingleSpace} ...\end{SingleSpace}
-  \begin{Spacing}{hfactori} ... \end{Spacing}
-  \begin{OnehalfSpace} ... \end{OnehalfSpace}
-  \begin{OnehalfSpace*} ... \end{OnehalfSpace*}
-  \begin{DoubleSpace} ... \end{DoubleSpace}
-  \begin{DoubleSpace*} ... \end{DoubleSpace*} 
-\end{verbatim}
-
-Para mais informações, consulte \citeonline[p. 47-52 e 135]{memoir}.
-
-% ---
-\section{Inclusão de outros arquivos}\label{sec-include}
-% ---
+% \end{alineas}
+
+% % ---
+% \section{Espaçamento entre parágrafos e linhas}
+% % ---
+
+% \index{espaçamento!dos parágrafos}O tamanho do parágrafo, espaço entre a margem
+% e o início da frase do parágrafo, é definido por:
+
+% \begin{verbatim}
+%    \setlength{\parindent}{1.3cm}
+% \end{verbatim}
+
+% \index{espaçamento!do primeiro parágrafo}Por padrão, não há espaçamento no
+% primeiro parágrafo de cada início de divisão do documento
+% (\autoref{sec-divisoes}). Porém, você pode definir que o primeiro parágrafo
+% também seja indentado, como é o caso deste documento. Para isso, apenas inclua o
+% pacote \textsf{indentfirst} no preâmbulo do documento:
+
+% \begin{verbatim}
+%    \usepackage{indentfirst}      % Indenta o primeiro parágrafo de cada seção.
+% \end{verbatim}
+
+% \index{espaçamento!entre os parágrafos}O espaçamento entre um parágrafo e outro
+% pode ser controlado por meio do comando:
+
+% \begin{verbatim}
+%   \setlength{\parskip}{0.2cm}  % tente também \onelineskip
+% \end{verbatim}
+
+% \index{espaçamento!entre as linhas}O controle do espaçamento entre linhas é
+% definido por:
+
+% \begin{verbatim}
+%   \OnehalfSpacing       % espaçamento um e meio (padrão); 
+%   \DoubleSpacing        % espaçamento duplo
+%   \SingleSpacing        % espaçamento simples	
+% \end{verbatim}
+
+% Para isso, também estão disponíveis os ambientes:
+
+% \begin{verbatim}
+%   \begin{SingleSpace} ...\end{SingleSpace}
+%   \begin{Spacing}{hfactori} ... \end{Spacing}
+%   \begin{OnehalfSpace} ... \end{OnehalfSpace}
+%   \begin{OnehalfSpace*} ... \end{OnehalfSpace*}
+%   \begin{DoubleSpace} ... \end{DoubleSpace}
+%   \begin{DoubleSpace*} ... \end{DoubleSpace*} 
+% \end{verbatim}
+
+% Para mais informações, consulte \citeonline[p. 47-52 e 135]{memoir}.
+
+% % ---
+% \section{Inclusão de outros arquivos}\label{sec-include}
+% % ---
 
-É uma boa prática dividir o seu documento em diversos arquivos, e não
-apenas escrever tudo em um único. Esse recurso foi utilizado neste
-documento. Para incluir diferentes arquivos em um arquivo principal,
-de modo que cada arquivo incluído fique em uma página diferente, utilize o
-comando:
+% É uma boa prática dividir o seu documento em diversos arquivos, e não
+% apenas escrever tudo em um único. Esse recurso foi utilizado neste
+% documento. Para incluir diferentes arquivos em um arquivo principal,
+% de modo que cada arquivo incluído fique em uma página diferente, utilize o
+% comando:
 
-\begin{verbatim}
-   \include{documento-a-ser-incluido}      % sem a extensão .tex
-\end{verbatim}
+% \begin{verbatim}
+%    \include{documento-a-ser-incluido}      % sem a extensão .tex
+% \end{verbatim}
 
-Para incluir documentos sem quebra de páginas, utilize:
+% Para incluir documentos sem quebra de páginas, utilize:
 
-\begin{verbatim}
-   \input{documento-a-ser-incluido}      % sem a extensão .tex
-\end{verbatim}
+% \begin{verbatim}
+%    \input{documento-a-ser-incluido}      % sem a extensão .tex
+% \end{verbatim}
 
-% ---
-\section{Compilar o documento \LaTeX}
-% ---
+% % ---
+% \section{Compilar o documento \LaTeX}
+% % ---
 
-Geralmente os editores \LaTeX, como o
-TeXlipse\footnote{\url{http://texlipse.sourceforge.net/}}, o
-Texmaker\footnote{\url{http://www.xm1math.net/texmaker/}}, entre outros,
-compilam os documentos automaticamente, de modo que você não precisa se
-preocupar com isso.
+% Geralmente os editores \LaTeX, como o
+% TeXlipse\footnote{\url{http://texlipse.sourceforge.net/}}, o
+% Texmaker\footnote{\url{http://www.xm1math.net/texmaker/}}, entre outros,
+% compilam os documentos automaticamente, de modo que você não precisa se
+% preocupar com isso.
 
-No entanto, você pode compilar os documentos \LaTeX usando os seguintes
-comandos, que devem ser digitados no \emph{Prompt de Comandos} do Windows ou no
-\emph{Terminal} do Mac ou do Linux:
+% No entanto, você pode compilar os documentos \LaTeX usando os seguintes
+% comandos, que devem ser digitados no \emph{Prompt de Comandos} do Windows ou no
+% \emph{Terminal} do Mac ou do Linux:
 
-\begin{verbatim}
-   pdflatex ARQUIVO_PRINCIPAL.tex
-   bibtex ARQUIVO_PRINCIPAL.aux
-   makeindex ARQUIVO_PRINCIPAL.idx 
-   makeindex ARQUIVO_PRINCIPAL.nlo -s nomencl.ist -o ARQUIVO_PRINCIPAL.nls
-   pdflatex ARQUIVO_PRINCIPAL.tex
-   pdflatex ARQUIVO_PRINCIPAL.tex
-\end{verbatim}
+% \begin{verbatim}
+%    pdflatex ARQUIVO_PRINCIPAL.tex
+%    bibtex ARQUIVO_PRINCIPAL.aux
+%    makeindex ARQUIVO_PRINCIPAL.idx 
+%    makeindex ARQUIVO_PRINCIPAL.nlo -s nomencl.ist -o ARQUIVO_PRINCIPAL.nls
+%    pdflatex ARQUIVO_PRINCIPAL.tex
+%    pdflatex ARQUIVO_PRINCIPAL.tex
+% \end{verbatim}
 
-% ---
-\section{Remissões internas}
-% ---
+% % ---
+% \section{Remissões internas}
+% % ---
 
-Ao nomear a \autoref{tab-nivinv} e a \autoref{fig_circulo}, apresentamos um
-exemplo de remissão interna, que também pode ser feita quando indicamos o
-\autoref{cap_exemplos}, que tem o nome \emph{\nameref{cap_exemplos}}. O número
-do capítulo indicado é \ref{cap_exemplos}, que se inicia à
-\autopageref{cap_exemplos}\footnote{O número da página de uma remissão pode ser
-obtida também assim:
-\pageref{cap_exemplos}.}.
-Veja a \autoref{sec-divisoes} para outros exemplos de remissões internas entre
-seções, subseções e subsubseções.
+% Ao nomear a \autoref{tab-nivinv} e a \autoref{fig_circulo}, apresentamos um
+% exemplo de remissão interna, que também pode ser feita quando indicamos o
+% \autoref{cap_exemplos}, que tem o nome \emph{\nameref{cap_exemplos}}. O número
+% do capítulo indicado é \ref{cap_exemplos}, que se inicia à
+% \autopageref{cap_exemplos}\footnote{O número da página de uma remissão pode ser
+% obtida também assim:
+% \pageref{cap_exemplos}.}.
+% Veja a \autoref{sec-divisoes} para outros exemplos de remissões internas entre
+% seções, subseções e subsubseções.
 
-O código usado para produzir o texto desta seção é:
+% O código usado para produzir o texto desta seção é:
 
-\begin{verbatim}
-Ao nomear a \autoref{tab-nivinv} e a \autoref{fig_circulo}, apresentamos um
-exemplo de remissão interna, que também pode ser feita quando indicamos o
-\autoref{cap_exemplos}, que tem o nome \emph{\nameref{cap_exemplos}}. O número
-do capítulo indicado é \ref{cap_exemplos}, que se inicia à
-\autopageref{cap_exemplos}\footnote{O número da página de uma remissão pode ser
-obtida também assim:
-\pageref{cap_exemplos}.}.
-Veja a \autoref{sec-divisoes} para outros exemplos de remissões internas entre
-seções, subseções e subsubseções.
-\end{verbatim}
+% \begin{verbatim}
+% Ao nomear a \autoref{tab-nivinv} e a \autoref{fig_circulo}, apresentamos um
+% exemplo de remissão interna, que também pode ser feita quando indicamos o
+% \autoref{cap_exemplos}, que tem o nome \emph{\nameref{cap_exemplos}}. O número
+% do capítulo indicado é \ref{cap_exemplos}, que se inicia à
+% \autopageref{cap_exemplos}\footnote{O número da página de uma remissão pode ser
+% obtida também assim:
+% \pageref{cap_exemplos}.}.
+% Veja a \autoref{sec-divisoes} para outros exemplos de remissões internas entre
+% seções, subseções e subsubseções.
+% \end{verbatim}
 
-% ---
-\section{Divisões do documento: seção}\label{sec-divisoes}
-% ---
+% % ---
+% \section{Divisões do documento: seção}\label{sec-divisoes}
+% % ---
 
-Esta seção testa o uso de divisões de documentos. Esta é a
-\autoref{sec-divisoes}. Veja a \autoref{sec-divisoes-subsection}.
+% Esta seção testa o uso de divisões de documentos. Esta é a
+% \autoref{sec-divisoes}. Veja a \autoref{sec-divisoes-subsection}.
 
-\subsection{Divisões do documento: subseção}\label{sec-divisoes-subsection}
+% \subsection{Divisões do documento: subseção}\label{sec-divisoes-subsection}
 
-Isto é uma subseção. Veja a \autoref{sec-divisoes-subsubsection}, que é uma
-\texttt{subsubsection} do \LaTeX, mas é impressa chamada de ``subseção'' porque
-no Português não temos a palavra ``subsubseção''.
+% Isto é uma subseção. Veja a \autoref{sec-divisoes-subsubsection}, que é uma
+% \texttt{subsubsection} do \LaTeX, mas é impressa chamada de ``subseção'' porque
+% no Português não temos a palavra ``subsubseção''.
 
-\subsubsection{Divisões do documento: subsubseção}
-\label{sec-divisoes-subsubsection}
+% \subsubsection{Divisões do documento: subsubseção}
+% \label{sec-divisoes-subsubsection}
 
-Isto é uma subsubseção.
+% Isto é uma subsubseção.
 
-\subsubsection{Divisões do documento: subsubseção}
+% \subsubsection{Divisões do documento: subsubseção}
 
-Isto é outra subsubseção.
+% Isto é outra subsubseção.
 
-\subsection{Divisões do documento: subseção}\label{sec-exemplo-subsec}
+% \subsection{Divisões do documento: subseção}\label{sec-exemplo-subsec}
 
-Isto é uma subseção.
+% Isto é uma subseção.
 
-\subsubsection{Divisões do documento: subsubseção}
-
-Isto é mais uma subsubseção da \autoref{sec-exemplo-subsec}.
+% \subsubsection{Divisões do documento: subsubseção}
+
+% Isto é mais uma subsubseção da \autoref{sec-exemplo-subsec}.
 
-
-\subsubsubsection{Esta é uma subseção de quinto
-nível}\label{sec-exemplo-subsubsubsection}
+
+% \subsubsubsection{Esta é uma subseção de quinto
+% nível}\label{sec-exemplo-subsubsubsection}
 
-Esta é uma seção de quinto nível. Ela é produzida com o seguinte comando:
-
-\begin{verbatim}
-\subsubsubsection{Esta é uma subseção de quinto
-nível}\label{sec-exemplo-subsubsubsection}
-\end{verbatim}
-
-\subsubsubsection{Esta é outra subseção de quinto nível}\label{sec-exemplo-subsubsubsection-outro}
-
-Esta é outra seção de quinto nível.
-
-
-\paragraph{Este é um parágrafo numerado}\label{sec-exemplo-paragrafo}
-
-Este é um exemplo de parágrafo nomeado. Ele é produzida com o comando de
-parágrafo:
-
-\begin{verbatim}
-\paragraph{Este é um parágrafo nomeado}\label{sec-exemplo-paragrafo}
-\end{verbatim}
-
-A numeração entre parágrafos numeradaos e subsubsubseções são contínuas.
-
-\paragraph{Esta é outro parágrafo numerado}\label{sec-exemplo-paragrafo-outro}
-
-Esta é outro parágrafo nomeado.
-
-% ---
-\section{Este é um exemplo de nome de seção longo. Ele deve estar
-alinhado à esquerda e a segunda e demais linhas devem iniciar logo abaixo da
-primeira palavra da primeira linha}
-% ---
-
-Isso atende à norma \citeonline[seções de 5.2.2 a 5.2.4]{NBR14724:2011} 
- e \citeonline[seções de 3.1 a 3.8]{NBR6024:2012}.
-
-% ---
-\section{Diferentes idiomas e hifenizações}
-\label{sec-hifenizacao}
-% ---
-
-Para usar hifenizações de diferentes idiomas, inclua nas opções do documento o
-nome dos idiomas que o seu texto contém. Por exemplo (para melhor
-visualização, as opções foram quebras em diferentes linhas):
-
-\begin{verbatim}
-\documentclass[
-	12pt,
-	openright,
-	twoside,
-	a4paper,
-	english,
-	french,
-	spanish,
-	brazil
-	]{abntex2}
-\end{verbatim}
-
-O idioma português-brasileiro (\texttt{brazil}) é incluído automaticamente pela
-classe \textsf{abntex2}. Porém, mesmo assim a opção \texttt{brazil} deve ser
-informada como a última opção da classe para que todos os pacotes reconheçam o
-idioma. Vale ressaltar que a última opção de idioma é a utilizada por padrão no
-documento. Desse modo, caso deseje escrever um texto em inglês que tenha
-citações em português e em francês, você deveria usar o preâmbulo como abaixo:
-
-\begin{verbatim}
-\documentclass[
-	12pt,
-	openright,
-	twoside,
-	a4paper,
-	french,
-	brazil,
-	english
-	]{abntex2}
-\end{verbatim}
-
-A lista completa de idiomas suportados, bem como outras opções de hifenização,
-estão disponíveis em \citeonline[p.~5-6]{babel}.
-
-Exemplo de hifenização em inglês\footnote{Extraído de:
-\url{http://en.wikibooks.org/wiki/LaTeX/Internationalization}}:
-
-\begin{otherlanguage*}{english}
-\textit{Text in English language. This environment switches all language-related
-definitions, like the language specific names for figures, tables etc. to the other
-language. The starred version of this environment typesets the main text
-according to the rules of the other language, but keeps the language specific
-string for ancillary things like figures, in the main language of the document.
-The environment hyphenrules switches only the hyphenation patterns used; it can
-also be used to disallow hyphenation by using the language name
-`nohyphenation'.}
-\end{otherlanguage*}
-
-Exemplo de hifenização em francês\footnote{Extraído de:
-\url{http://bigbrowser.blog.lemonde.fr/2013/02/17/tu-ne-tweeteras-point-le-vatican-interdit-aux-cardinaux-de-tweeter-pendant-le-conclave/}}:
-
-\begin{otherlanguage*}{french}
-\textit{Texte en français. Pas question que Twitter ne vienne faire une
-concurrence déloyale à la traditionnelle fumée blanche qui marque l'élection
-d'un nouveau pape. Pour éviter toute fuite précoce, le Vatican a donc pris un
-peu d'avance, et a déjà interdit aux cardinaux qui prendront part au vote
-d'utiliser le réseau social, selon Catholic News Service. Une mesure valable
-surtout pour les neuf cardinaux – sur les 117 du conclave – pratiquants très
-actifs de Twitter, qui auront interdiction pendant toute la période de se
-connecter à leur compte.}
-\end{otherlanguage*}
-
-Pequeno texto em espanhol\footnote{Extraído de:
-\url{http://internacional.elpais.com/internacional/2013/02/17/actualidad/1361102009_913423.html}}:
-
-\foreignlanguage{spanish}{\textit{Decenas de miles de personas ovacionan al pontífice en su
-penúltimo ángelus dominical, el primero desde que anunciase su renuncia. El Papa se
-centra en la crítica al materialismo}}.
-
-O idioma geral do texto por ser alterado como no exemplo seguinte:
-
-\begin{verbatim}
-  \selectlanguage{english}
-\end{verbatim}
-
-Isso altera automaticamente a hifenização e todos os nomes constantes de
-referências do documento para o idioma inglês. Consulte o manual da classe
-\cite{abntex2classe} para obter orientações adicionais sobre internacionalização de
-documentos produzidos com \abnTeX.
-
-A \autoref{sec-citacao} descreve o ambiente \texttt{citacao} que pode receber
-como parâmetro um idioma a ser usado na citação.
-
-% ---
-\section{Consulte o manual da classe \textsf{abntex2}}
-% ---
-
-Consulte o manual da classe \textsf{abntex2} \cite{abntex2classe} para uma
-referência completa das macros e ambientes disponíveis. 
-
-Além disso, o manual possui informações adicionais sobre as normas ABNT
-observadas pelo \abnTeX\ e considerações sobre eventuais requisitos específicos
-não atendidos, como o caso da \citeonline[seção 5.2.2]{NBR14724:2011}, que
-especifica o espaçamento entre os capítulos e o início do texto, regra
-propositalmente não atendida pelo presente modelo.
-
-% ---
-\section{Referências bibliográficas}
-% ---
-
-A formatação das referências bibliográficas conforme as regras da ABNT são um
-dos principais objetivos do \abnTeX. Consulte os manuais
-\citeonline{abntex2cite} e \citeonline{abntex2cite-alf} para obter informações
-sobre como utilizar as referências bibliográficas.
-
-%-
-\subsection{Acentuação de referências bibliográficas}
-%-
-
-Normalmente não há problemas em usar caracteres acentuados em arquivos
-bibliográficos (\texttt{*.bib}). Porém, como as regras da ABNT fazem uso quase
-abusivo da conversão para letras maiúsculas, é preciso observar o modo como se
-escreve os nomes dos autores. Na ~\autoref{tabela-acentos} você encontra alguns
-exemplos das conversões mais importantes. Preste atenção especial para `ç' e `í'
-que devem estar envoltos em chaves. A regra geral é sempre usar a acentuação
-neste modo quando houver conversão para letras maiúsculas.
-
-\begin{table}[htbp]
-\caption{Tabela de conversão de acentuação.}
-\label{tabela-acentos}
-
-\begin{center}
-\begin{tabular}{ll}\hline\hline
-acento & \textsf{bibtex}\\
-à á ã & \verb+\`a+ \verb+\'a+ \verb+\~a+\\
-í & \verb+{\'\i}+\\
-ç & \verb+{\c c}+\\
-\hline\hline
-\end{tabular}
-\end{center}
-\end{table}
-
-
-% ---
-\section{Precisa de ajuda?}
-% ---
-
-Consulte a FAQ com perguntas frequentes e comuns no portal do \abnTeX:
-\url{https://github.com/abntex/abntex2/wiki/FAQ}.
-
-Inscreva-se no grupo de usuários \LaTeX:
-\url{http://groups.google.com/group/latex-br}, tire suas dúvidas e ajude
-outros usuários.
-
-Participe também do grupo de desenvolvedores do \abnTeX:
-\url{http://groups.google.com/group/abntex2} e faça sua contribuição à
-ferramenta.
-
-% ---
-\section{Você pode ajudar?}
-% ---
-
-Sua contribuição é muito importante! Você pode ajudar na divulgação, no
-desenvolvimento e de várias outras formas. Veja como contribuir com o \abnTeX\
-em \url{https://github.com/abntex/abntex2/wiki/Como-Contribuir}.
-
-% ---
-\section{Quer customizar os modelos do \abnTeX\ para sua instituição ou
-universidade?}
-% ---
-
-Veja como customizar o \abnTeX\ em:
-\url{https://github.com/abntex/abntex2/wiki/ComoCustomizar}.
+% Esta é uma seção de quinto nível. Ela é produzida com o seguinte comando:
+
+% \begin{verbatim}
+% \subsubsubsection{Esta é uma subseção de quinto
+% nível}\label{sec-exemplo-subsubsubsection}
+% \end{verbatim}
+
+% \subsubsubsection{Esta é outra subseção de quinto nível}\label{sec-exemplo-subsubsubsection-outro}
+
+% Esta é outra seção de quinto nível.
+
+
+% \paragraph{Este é um parágrafo numerado}\label{sec-exemplo-paragrafo}
+
+% Este é um exemplo de parágrafo nomeado. Ele é produzida com o comando de
+% parágrafo:
+
+% \begin{verbatim}
+% \paragraph{Este é um parágrafo nomeado}\label{sec-exemplo-paragrafo}
+% \end{verbatim}
+
+% A numeração entre parágrafos numeradaos e subsubsubseções são contínuas.
+
+% \paragraph{Esta é outro parágrafo numerado}\label{sec-exemplo-paragrafo-outro}
+
+% Esta é outro parágrafo nomeado.
+
+% % ---
+% \section{Este é um exemplo de nome de seção longo. Ele deve estar
+% alinhado à esquerda e a segunda e demais linhas devem iniciar logo abaixo da
+% primeira palavra da primeira linha}
+% % ---
+
+% Isso atende à norma \citeonline[seções de 5.2.2 a 5.2.4]{NBR14724:2011} 
+%  e \citeonline[seções de 3.1 a 3.8]{NBR6024:2012}.
+
+% % ---
+% \section{Diferentes idiomas e hifenizações}
+% \label{sec-hifenizacao}
+% % ---
+
+% Para usar hifenizações de diferentes idiomas, inclua nas opções do documento o
+% nome dos idiomas que o seu texto contém. Por exemplo (para melhor
+% visualização, as opções foram quebras em diferentes linhas):
+
+% \begin{verbatim}
+% \documentclass[
+% 	12pt,
+% 	openright,
+% 	twoside,
+% 	a4paper,
+% 	english,
+% 	french,
+% 	spanish,
+% 	brazil
+% 	]{abntex2}
+% \end{verbatim}
+
+% O idioma português-brasileiro (\texttt{brazil}) é incluído automaticamente pela
+% classe \textsf{abntex2}. Porém, mesmo assim a opção \texttt{brazil} deve ser
+% informada como a última opção da classe para que todos os pacotes reconheçam o
+% idioma. Vale ressaltar que a última opção de idioma é a utilizada por padrão no
+% documento. Desse modo, caso deseje escrever um texto em inglês que tenha
+% citações em português e em francês, você deveria usar o preâmbulo como abaixo:
+
+% \begin{verbatim}
+% \documentclass[
+% 	12pt,
+% 	openright,
+% 	twoside,
+% 	a4paper,
+% 	french,
+% 	brazil,
+% 	english
+% 	]{abntex2}
+% \end{verbatim}
+
+% A lista completa de idiomas suportados, bem como outras opções de hifenização,
+% estão disponíveis em \citeonline[p.~5-6]{babel}.
+
+% Exemplo de hifenização em inglês\footnote{Extraído de:
+% \url{http://en.wikibooks.org/wiki/LaTeX/Internationalization}}:
+
+% \begin{otherlanguage*}{english}
+% \textit{Text in English language. This environment switches all language-related
+% definitions, like the language specific names for figures, tables etc. to the other
+% language. The starred version of this environment typesets the main text
+% according to the rules of the other language, but keeps the language specific
+% string for ancillary things like figures, in the main language of the document.
+% The environment hyphenrules switches only the hyphenation patterns used; it can
+% also be used to disallow hyphenation by using the language name
+% `nohyphenation'.}
+% \end{otherlanguage*}
+
+% Exemplo de hifenização em francês\footnote{Extraído de:
+% \url{http://bigbrowser.blog.lemonde.fr/2013/02/17/tu-ne-tweeteras-point-le-vatican-interdit-aux-cardinaux-de-tweeter-pendant-le-conclave/}}:
+
+% \begin{otherlanguage*}{french}
+% \textit{Texte en français. Pas question que Twitter ne vienne faire une
+% concurrence déloyale à la traditionnelle fumée blanche qui marque l'élection
+% d'un nouveau pape. Pour éviter toute fuite précoce, le Vatican a donc pris un
+% peu d'avance, et a déjà interdit aux cardinaux qui prendront part au vote
+% d'utiliser le réseau social, selon Catholic News Service. Une mesure valable
+% surtout pour les neuf cardinaux – sur les 117 du conclave – pratiquants très
+% actifs de Twitter, qui auront interdiction pendant toute la période de se
+% connecter à leur compte.}
+% \end{otherlanguage*}
+
+% Pequeno texto em espanhol\footnote{Extraído de:
+% \url{http://internacional.elpais.com/internacional/2013/02/17/actualidad/1361102009_913423.html}}:
+
+% \foreignlanguage{spanish}{\textit{Decenas de miles de personas ovacionan al pontífice en su
+% penúltimo ángelus dominical, el primero desde que anunciase su renuncia. El Papa se
+% centra en la crítica al materialismo}}.
+
+% O idioma geral do texto por ser alterado como no exemplo seguinte:
+
+% \begin{verbatim}
+%   \selectlanguage{english}
+% \end{verbatim}
+
+% Isso altera automaticamente a hifenização e todos os nomes constantes de
+% referências do documento para o idioma inglês. Consulte o manual da classe
+% \cite{abntex2classe} para obter orientações adicionais sobre internacionalização de
+% documentos produzidos com \abnTeX.
+
+% A \autoref{sec-citacao} descreve o ambiente \texttt{citacao} que pode receber
+% como parâmetro um idioma a ser usado na citação.
+
+% % ---
+% \section{Consulte o manual da classe \textsf{abntex2}}
+% % ---
+
+% Consulte o manual da classe \textsf{abntex2} \cite{abntex2classe} para uma
+% referência completa das macros e ambientes disponíveis. 
+
+% Além disso, o manual possui informações adicionais sobre as normas ABNT
+% observadas pelo \abnTeX\ e considerações sobre eventuais requisitos específicos
+% não atendidos, como o caso da \citeonline[seção 5.2.2]{NBR14724:2011}, que
+% especifica o espaçamento entre os capítulos e o início do texto, regra
+% propositalmente não atendida pelo presente modelo.
+
+% % ---
+% \section{Referências bibliográficas}
+% % ---
+
+% A formatação das referências bibliográficas conforme as regras da ABNT são um
+% dos principais objetivos do \abnTeX. Consulte os manuais
+% \citeonline{abntex2cite} e \citeonline{abntex2cite-alf} para obter informações
+% sobre como utilizar as referências bibliográficas.
+
+% %-
+% \subsection{Acentuação de referências bibliográficas}
+% %-
+
+% Normalmente não há problemas em usar caracteres acentuados em arquivos
+% bibliográficos (\texttt{*.bib}). Porém, como as regras da ABNT fazem uso quase
+% abusivo da conversão para letras maiúsculas, é preciso observar o modo como se
+% escreve os nomes dos autores. Na ~\autoref{tabela-acentos} você encontra alguns
+% exemplos das conversões mais importantes. Preste atenção especial para `ç' e `í'
+% que devem estar envoltos em chaves. A regra geral é sempre usar a acentuação
+% neste modo quando houver conversão para letras maiúsculas.
+
+% \begin{table}[htbp]
+% \caption{Tabela de conversão de acentuação.}
+% \label{tabela-acentos}
+
+% \begin{center}
+% \begin{tabular}{ll}\hline\hline
+% acento & \textsf{bibtex}\\
+% à á ã & \verb+\`a+ \verb+\'a+ \verb+\~a+\\
+% í & \verb+{\'\i}+\\
+% ç & \verb+{\c c}+\\
+% \hline\hline
+% \end{tabular}
+% \end{center}
+% \end{table}
+
+
+% % ---
+% \section{Precisa de ajuda?}
+% % ---
+
+% Consulte a FAQ com perguntas frequentes e comuns no portal do \abnTeX:
+% \url{https://github.com/abntex/abntex2/wiki/FAQ}.
+
+% Inscreva-se no grupo de usuários \LaTeX:
+% \url{http://groups.google.com/group/latex-br}, tire suas dúvidas e ajude
+% outros usuários.
+
+% Participe também do grupo de desenvolvedores do \abnTeX:
+% \url{http://groups.google.com/group/abntex2} e faça sua contribuição à
+% ferramenta.
+
+% % ---
+% \section{Você pode ajudar?}
+% % ---
+
+% Sua contribuição é muito importante! Você pode ajudar na divulgação, no
+% desenvolvimento e de várias outras formas. Veja como contribuir com o \abnTeX\
+% em \url{https://github.com/abntex/abntex2/wiki/Como-Contribuir}.
+
+% % ---
+% \section{Quer customizar os modelos do \abnTeX\ para sua instituição ou
+% universidade?}
+% % ---
+
+% Veja como customizar o \abnTeX\ em:
+% \url{https://github.com/abntex/abntex2/wiki/ComoCustomizar}.
 
