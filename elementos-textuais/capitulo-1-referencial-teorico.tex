@@ -25,12 +25,18 @@
 % ---
  
 \chapter{Referencial Teórico}\label{referecial_teorico}
+
+% % escrever algo entre o inicio de cada capitulo 
+% - Ultimo paragrafo da introdução , irei mencionar o abordado em cada capitulo 
+% - Inicio de cada seção conter uma descrição 
+% - Palavras em ingles italico \texitt
+Neste capitulo é abordado o referencial teórico, utilizado como embasamento para a construção deste trabalho
 % ---
 \section{Sistema SIGMA } 
-O Sistema de Gerenciamento Militar de Armas (SIGMA) é um sistema computacional desenvolvido pelo Exército Brasileiro para o controle de armas de fogo, munições e demais produtos controlados. O sistema foi implantado em 2002 e vem sendo constantemente atualizado para atender às necessidades da Força.
+O Sistema de Gerenciamento Militar de Armas (SIGMA) é um sistema computacional desenvolvido pelo Exército Brasileiro para o controle de armas de fogo, munições e demais produtos controlados. O sistema foi implantado em 2002 e vem sendo constantemente atualizado para atender às necessidades da Força.\cite{ExércitoBrasileiro}
 
 \subsection{Contexto de implantação}
-O contexto da implantação do SIGMA foi a necessidade de modernizar o sistema de controle de armas de fogo e munições do Exército Brasileiro. O sistema anterior, o Sistema de Controle de Produtos Controlados (SICOP), era considerado obsoleto e não atendia às necessidades da Força.
+O contexto da implantação do SIGMA foi a necessidade de modernizar o sistema de controle de armas de fogo e munições do Exército Brasileiro.
 O SIGMA foi desenvolvido com base nas melhores práticas internacionais de controle de armas de fogo. O sistema é integrado a outros sistemas de informação do Exército Brasileiro, o que permite a troca de dados e informações entre as diferentes áreas da Força.\cite{ExércitoBrasileiro}
 
 \subsection{Arquivo AEL}
@@ -42,19 +48,34 @@ O Arquivo Eletrônico em Lote (AEL) é um arquivo de dados que deve ser gerado p
 \end{itemize}\cite{ExércitoBrasileiro}
 
 O AEL deve ser gerado em um formato texto e deve seguir um layout pré-definido.\cite{ebInstrucaoAdministrativa} 
+
 \section{Gerenciamento de processos}
-É uma abordagem disciplinada e sistemática que envolve práticas relacionadas aos processos de negócio, automatizados ou não, com o objetivo de alcançar resultados consistentes e alinhados com as metas estratégicas de uma organização. Pode-se concluir que os sistemas de informação oferecem inúmeros benefícios para uma organização, sejam eles para melhorar o fluxo de informação, as tomadas decisões, controle de qualidade, ou ampliar a produtividade
+É uma abordagem disciplinada e sistemática que envolve práticas relacionadas aos processos de negócio, automatizados ou não, com o objetivo de alcançar resultados consistentes e alinhados com as metas estratégicas de uma organização. Pode-se concluir que os sistemas de informação oferecem inúmeros benefícios para uma organização, sejam eles para melhorar o fluxo de informação, as tomadas decisões, controle de qualidade, ou ampliar a produtividade\cite{davila2008inovaccao}
 
 \subsection{BPMN}
-Business Process Model and Notation é uma notação gráfica padronizada para desenhar processos de negócios em um fluxograma. A diagramação BPMN é intuitiva e permite a representação de detalhes complexos do processo. A simbologia BPMN serve como uma linguagem padrão, colocando um fim na lacuna de comunicação entre a modelagem do processo e sua execução, conforme GONÇALVES, J. E. S. (2013) ''Compreende o levantamento e o registro da situação atual dos processos organizacionais, descrevendo fluxos, insumos e demais informações necessárias ao entendimento uniforme dos processos por todos os envolvidos. O objetivo da análise de processos é criar um entendimento das atividades do processo e medir o sucesso dessas atividades no alcance dos objetivos''.
+Modelo e notação de processos de negócios ''Business Process Model and Notation'' é uma notação gráfica padronizada para desenhar processos de negócios em um fluxograma. A diagramação BPMN é intuitiva e permite a representação de detalhes complexos do processo. A simbologia BPMN serve como uma linguagem padrão, colocando um fim na lacuna de comunicação entre a modelagem do processo e sua execução, conforme 
+\begin{citacao}
+	\cite{bitencourt2016elicitaccao} 
+	Modelo de processos de negocio representa os processos de negocio de uma empresa e permite a documentação, simulação, compartilhamento, implementação, avaliação e melhoramento continuo das operacoes, com o intuito de compreender o funcionamento da organização e os aspectos do seu dominio
+	
+\end{citacao}
+Em resumo, o levantamento e registro da situação atual dos processos, seguido por uma análise aprofundada, são práticas essenciais para promover a eficiência, a eficácia e a adaptação contínua dentro de uma organização. Essa abordagem sistemática para entender e aprimorar os processos é fundamental para o sucesso a longo prazo e a sustentabilidade organizacional.
 
-\section{Sistemas Web}
+\section{Aplicações Web}
+Aplicações web são programas que são executados em navegadores e são acessados por meio de internet.
+Surgiram na década de 1990 e se tornaram populares por permitirem a interação do usuário e o processamento de dados.
+Existem dois tipos principais: estáticas (HTML, CSS e JavaScript) e dinâmicas (linguagens de programação do lado do servidor).
+São compostas por front-end (exibido ao usuário), back-end (executado no servidor) e banco de dados.
+Funcionam por meio de solicitações do navegador ao servidor, que executa o código do back-end e envia a resposta ao navegador.
+Oferecem benefícios como acessibilidade, atualização, redução de custos e escalabilidade
+\cite{amazonAplicaoWeb}
 
-\section{JavaScript}
+\subsection{JavaScript}
 Uma linguagem de programação amplamente usada no desenvolvimento web. Ela permite adicionar interatividade e dinamismo a páginas da web. Além de ser usado no desenvolvimento front-end, o JavaScript também pode ser usado no desenvolvimento de aplicativos do lado do servidor (backend) com o uso de tecnologias como o Node.js. HTML, para especificar o conteúdo de páginas Web, CSS, para especificar a apresentação dessas páginas, e JavaScript, para especificar o comportamento delas. ( FLANAGAN, DAVID, 2013) 
 
 
 \section{Padrões de desenvolvimento}
+
 
 \subsection{Arquitetura Cliente Servidor}
 Amplamente utilizado em sistemas de computação distribuída. Nessa arquitetura, o software é dividido em duas partes principais: o cliente e o servidor.
@@ -87,7 +108,6 @@ O Passport-local é uma estratégia de autenticação fornecida pelo Passport.js
 \subsubsection{Token JWT}
 
 
-
 \section{Banco de dados NOSQL}
 Banco de dados NoSQL é um tipo de banco de dados que difere dos bancos de dados relacionais tradicionais (SQL) em sua estrutura de armazenamento e modelo de dados. NoSQL significa "Not Only SQL" (Não Apenas SQL) e abrange diversos tipos de bancos de dados que oferecem uma abordagem alternativa para o armazenamento e recuperação de dados.
 MongoDB é um exemplo popular de banco de dados NoSQL. Ele é um sistema de gerenciamento de banco de dados orientado a documentos, o que significa que os dados são armazenados em documentos semelhantes a JSON, em vez de tabelas com linhas e colunas como em um banco de dados relacional.
@@ -115,6 +135,9 @@ O React usa uma abordagem baseada em componentes, o que facilita a criação e o
 
 \subsection{CSS}
 CSS (Cascading Style Sheets) é uma linguagem usada para estilizar a aparência dos elementos em uma página da web. Ele permite controlar cores, fontes, margens, posicionamento e outros aspectos visuais dos elementos HTML. O CSS é usado em conjunto com o HTML para criar layouts atraentes e responsivos. Ele oferece flexibilidade para personalizar o estilo de um site e torná-lo visualmente agradável para os usuários. 
+
+
+
 % ---
 
 % A codificação de todos os arquivos do \abnTeX\ é \texttt{UTF8}. É necessário que
