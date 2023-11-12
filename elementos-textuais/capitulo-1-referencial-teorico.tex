@@ -32,49 +32,86 @@
 % - Palavras em ingles italico \texitt
 Neste capitulo é abordado o referencial teórico, utilizado como embasamento para a construção deste trabalho
 % ---
-\section{Sistema SIGMA } 
-O Sistema de Gerenciamento Militar de Armas (SIGMA) é um sistema computacional desenvolvido pelo Exército Brasileiro para o controle de armas de fogo, munições e demais produtos controlados. O sistema foi implantado em 2002 e vem sendo constantemente atualizado para atender às necessidades da Força.\cite{ExércitoBrasileiro}
+\section{ Controle na Segurança Publica Brasileira }
+Atualmente no Brasil existem dois sistemas informatizados utilizados por órgãos públicos para realizar a regulamentação e o monitoramento de armas de fogo, munições e demais produtos controlados.
+Sendo estes,o Sistema de Gerenciamento Militar de Armas (SIGMA) e o Sistema Nacional de Armas (SINARM). O SIGMA é administrado pelo Exército Brasileiro e é responsável pelo controle de armas de fogo e munições no âmbito da Força. O SINARM é administrado pela Polícia Federal e é responsável pelo controle de armas de fogo e munições em poder da população civil.\cite{shotEntendaSinarm}
+
+\subsection{SIGMA e SINARM}
+A principal diferença entre SIGMA e SINARM é o âmbito de atuação. O SIGMA é responsável pelo controle de armas de fogo e munições no âmbito do Exército Brasileiro, enquanto o SINARM é responsável pelo controle de armas de fogo e munições em poder da população civil.
+Outra diferença entre os dois sistemas é a natureza das informações que eles gerenciam. O SIGMA gerencia informações sobre armas de fogo e munições de uso militar, enquanto o SINARM gerencia informações sobre armas de fogo e munições de uso civil.
+A seguir, está uma tabela comparativa que resume as principais diferenças entre ambos: 
+\begin{table}[ht]
+	\centering
+	\caption{Comparação entre SIGMA e SINARM}
+	\begin{tabularx}{\textwidth}{lXp{5cm}}
+	  \toprule
+	  Característica & SIGMA & SINARM \\
+	  \midrule
+	  Âmbito de atuação & Exército Brasileiro & População civil \\
+	  Natureza das informações & Armas de fogo e munições de uso militar & Armas de fogo e munições de uso civil \\
+	  Responsável pela administração & Exército Brasileiro & Polícia Federal \\
+	  \bottomrule
+	\end{tabularx}
+  \end{table}
+
+  
+% \section{Segurança Publica - Integração SIGMA e SINARM}
+% \cite[Em 2019, a Polícia Federal autorizou que o Exército tenha acesso ao Sinarm, já os militares não permitiram a liberação das informações do Sigma para os agentes da PF]{sbtnewsExxE9rcitoPolxEDcia}
+% \cite{inDECRETO9847}
+
+\section{ Sistema SIGMA } 
+O Sistema de Gerenciamento Militar de Armas (SIGMA) é um sistema computacional desenvolvido pelo Centro de Desenvolvimento de Sistemas (CDS) do Exército Brasileiro e  implantado em 2003 que vem sendo constantemente atualizado para atender às necessidades da Força.\cite{fenemeReunixE3oSobre}
 
 \subsection{Contexto de implantação}
 O contexto da implantação do SIGMA foi a necessidade de modernizar o sistema de controle de armas de fogo e munições do Exército Brasileiro.
-O SIGMA foi desenvolvido com base nas melhores práticas internacionais de controle de armas de fogo. O sistema é integrado a outros sistemas de informação do Exército Brasileiro, o que permite a troca de dados e informações entre as diferentes áreas da Força.\cite{ExércitoBrasileiro}
+O SIGMA foi desenvolvido com base nas melhores práticas internacionais de controle de armas de fogo. O sistema é integrado a outros sistemas de informação do Exército Brasileiro, o que permite a troca de dados e informações entre as diferentes áreas da Força.\cite{fenemeReunixE3oSobre}
 
-\subsection{Arquivo AEL}
-O Arquivo Eletrônico em Lote (AEL) é um arquivo de dados que deve ser gerado pela Brigada Militar para o cadastro de armas de fogo no SIGMA. O arquivo deve conter as seguintes informações:
+\subsection{AEL}
+O Arquivo Eletrônico em Lote (AEL) é um arquivo digital que contém as informações necessárias para o cadastro produtos controlado no SIGMA.
+O AEL é utilizado para o cadastro de armas de fogo de diversas entidades, como as Forças Armadas, as forças auxiliares, a Polícia Militar e o Corpo de Bombeiros.\cite{ExércitoBrasileiro}
+
+O Objetivo do AEL no sistema SIGMA é permitir o cadastro de produtos controlados de diversas entidades de forma centralizada e organizada. O AEL é um elemento importante do SIGMA, pois permite que o Exército Brasileiro tenha um controle mais eficiente das armas de fogo em circulação no país\cite{ExércitoBrasileiro}
+
+\subsection{Arquivo AEL na Brigada Militar do Rio Grande do Sul}
+O AEL no contexto da BM RS, dever ser gerado para o cadastro de armas de fogo de policiais militares. O arquivo deve conter as seguintes informações:
 \begin{itemize}
     \item Identificação da Brigada Militar: número do QG, código da OM e nome da OM.
-    \item Identificação do armamento: número da arma, tipo de arma, marca, modelo, calibre e série.
+    \item Identificação do armamento: número da arma, tipo de arma, marca, modelo, calibre, série.
     \item Identificação do proprietário: nome completo, CPF, RG, endereço e telefone.
-\end{itemize}\cite{ExércitoBrasileiro}
+\end{itemize}
+Entre demais informações especificadas nos anexos\ref{sec:anexoA2} e \ref{sec:anexoA3}.
 
-O AEL deve ser gerado em um formato texto e deve seguir um layout pré-definido.\cite{ebInstrucaoAdministrativa} 
+O AEL deve ser gerado em um formato texto, seguindo um layout pré-definido e estar conforme os parâmetros de indexação das informações constantes nos anexos\ref{sec:anexoA1} e \ref{sec:anexoA4}.
 
 \section{Gerenciamento de processos}
-É uma abordagem disciplinada e sistemática que envolve práticas relacionadas aos processos de negócio, automatizados ou não, com o objetivo de alcançar resultados consistentes e alinhados com as metas estratégicas de uma organização. Pode-se concluir que os sistemas de informação oferecem inúmeros benefícios para uma organização, sejam eles para melhorar o fluxo de informação, as tomadas decisões, controle de qualidade, ou ampliar a produtividade\cite{davila2008inovaccao}
-
+É uma abordagem disciplinada e sistemática que envolve práticas relacionadas aos processos de negócio, automatizados ou não, com o objetivo de alcançar resultados consistentes e alinhados com as metas estratégicas de uma organização. 
+Conforme\cite{davila2008inovaccao}''As organizações tentam inovar para se diferenciar e obter vantagens competitivas, tanto pela melhoria nos bens/serviços fornecidos quanto pela eficiência operativa''
+Pode-se concluir que os sistemas de informação oferecem inúmeros benefícios para uma organização, sejam eles para melhorar o fluxo de informação, as tomadas decisões, controle de qualidade, ou ampliar a produtividade
 \subsection{BPMN}
-Modelo e notação de processos de negócios ''Business Process Model and Notation'' é uma notação gráfica padronizada para desenhar processos de negócios em um fluxograma. A diagramação BPMN é intuitiva e permite a representação de detalhes complexos do processo. A simbologia BPMN serve como uma linguagem padrão, colocando um fim na lacuna de comunicação entre a modelagem do processo e sua execução, conforme 
+Modelo e notação de processos de negócios (\textit{Business Process Model and Notation}) é uma notação gráfica padronizada para desenhar processos de negócios em um fluxograma. A diagramação BPMN é intuitiva e permite a representação de detalhes complexos do processo. A simbologia BPMN serve como uma linguagem padrão, colocando um fim na lacuna de comunicação entre a modelagem do processo e sua execução, para 
 \begin{citacao}
 	\cite{bitencourt2016elicitaccao} 
-	Modelo de processos de negocio representa os processos de negocio de uma empresa e permite a documentação, simulação, compartilhamento, implementação, avaliação e melhoramento continuo das operacoes, com o intuito de compreender o funcionamento da organização e os aspectos do seu dominio
+	Modelo de processos de negocio representa os processos de negocio de uma empresa e permite a documentação, simulação, compartilhamento, implementação, avaliação e melhoramento continuo das operações, com o intuito de compreender o funcionamento da organização e os aspectos do seu domínio
 	
 \end{citacao}
-Em resumo, o levantamento e registro da situação atual dos processos, seguido por uma análise aprofundada, são práticas essenciais para promover a eficiência, a eficácia e a adaptação contínua dentro de uma organização. Essa abordagem sistemática para entender e aprimorar os processos é fundamental para o sucesso a longo prazo e a sustentabilidade organizacional.
+Em resumo, o levantamento e registro da situação atual dos processos, seguido por uma análise aprofundada, são práticas essenciais para promover a eficiência, a eficácia e a adaptação contínua dentro de uma organização. Essa abordagem sistemática para entender e aprimorar os processos é fundamental para a sustentabilidade organizacional.
 
 \section{Aplicações Web}
 Aplicações web são programas que são executados em navegadores e são acessados por meio de internet.
 Surgiram na década de 1990 e se tornaram populares por permitirem a interação do usuário e o processamento de dados.
 Existem dois tipos principais: estáticas (HTML, CSS e JavaScript) e dinâmicas (linguagens de programação do lado do servidor).
-São compostas por front-end (exibido ao usuário), back-end (executado no servidor) e banco de dados.
-Funcionam por meio de solicitações do navegador ao servidor, que executa o código do back-end e envia a resposta ao navegador.
-Oferecem benefícios como acessibilidade, atualização, redução de custos e escalabilidade
-\cite{amazonAplicaoWeb}
+São compostas pela \textit{interface} que é exibida ao usuário, juntamente com logica algorítmica que realiza o processamento dos dados executando no lado do servidor e o banco de dados responsável por armazenar e disponibilizar as informações.
+Funcionam por meio de solicitações do navegador ao servidor, que executa o código do servidor e envia a resposta ao navegador.
+Conforme o site da \cite{amazonAplicaoWeb} oferecem diversos benefícios como acessibilidade, atualização, redução de custos e escalabilidade.
 
-\subsection{JavaScript}
-Uma linguagem de programação amplamente usada no desenvolvimento web. Ela permite adicionar interatividade e dinamismo a páginas da web. Além de ser usado no desenvolvimento front-end, o JavaScript também pode ser usado no desenvolvimento de aplicativos do lado do servidor (backend) com o uso de tecnologias como o Node.js. HTML, para especificar o conteúdo de páginas Web, CSS, para especificar a apresentação dessas páginas, e JavaScript, para especificar o comportamento delas. ( FLANAGAN, DAVID, 2013) 
+\subsection{Linguagem JavaScript}
+Uma linguagem de programação amplamente usada no desenvolvimento web de acordo com a organização \cite{mozillaJavaScript}. Ela permite adicionar interatividade e dinamismo a páginas da web. Além de ser usado no desenvolvimento de interfaces de usuário, o JavaScript também pode ser usado no desenvolvimento de aplicativos do lado do servidor (backend) com o uso de tecnologias como o Node.js. Conforme \cite{flanagan2012javascript} ''Javascript já deixou para trás suas raízes como linguagem de script há muito tempo, tornando-se uma linguagem de uso geral, robusta e eficiente''
 
 
-\section{Padrões de desenvolvimento}
+\section{Padrões de Projeto de Sistemas}
+Padrões de desenvolvimento de software referem-se a soluções reutilizáveis para problemas comuns encontrados no processo de desenvolvimento de software. Esses padrões são abstrações que encapsulam as melhores práticas, representando soluções testadas e comprovadas para desafios recorrentes. Eles fornecem diretrizes para o design e implementação de código, promovendo a consistência, a manutenibilidade e a eficiência no desenvolvimento de software.\cite{padroesProjeto}
+
+O contexto dos padrões de desenvolvimento de software está relacionado aos desafios enfrentados pelos desenvolvedores ao criar sistemas de software complexos.Para \cite{padroesProjeto} ''Um padrão de projeto nomeia, abstrai e identifica aspectos problemáticos comuns e propõe uma solução padrão para esses problemas''
 
 
 \subsection{Arquitetura Cliente Servidor}
