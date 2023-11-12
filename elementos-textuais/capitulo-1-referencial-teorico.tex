@@ -99,10 +99,12 @@ Em resumo, o levantamento e registro da situação atual dos processos, seguido 
 \section{Aplicações Web}
 Aplicações web são programas que são executados em navegadores e são acessados por meio de internet.
 Surgiram na década de 1990 e se tornaram populares por permitirem a interação do usuário e o processamento de dados.
+
 Existem dois tipos principais: estáticas (HTML, CSS e JavaScript) e dinâmicas (linguagens de programação do lado do servidor).
-São compostas pela \textit{interface} que é exibida ao usuário, juntamente com logica algorítmica que realiza o processamento dos dados executando no lado do servidor e o banco de dados responsável por armazenar e disponibilizar as informações.
-Funcionam por meio de solicitações do navegador ao servidor, que executa o código do servidor e envia a resposta ao navegador.
-Conforme o site da \cite{amazonAplicaoWeb} oferecem diversos benefícios como acessibilidade, atualização, redução de custos e escalabilidade.
+De acordo com\cite{aplicacoesWeb} as aplicações estáticas geralmente consistem em páginas web com conteúdo fixo, sem interação avançada ou processamento de dados em tempo real. O navegador do cliente solicita páginas estáticas ao servidor, que retorna arquivos HTML, CSS e JavaScript. A renderização e interação ocorrem no navegador.
+
+Aplicações Dinâmicas apresentam interatividade avançada e processamento de dados em tempo real o navegador solicita uma página ao servidor. O servidor executa a lógica de negócios, acessa dados do banco de dados, gera dinamicamente o conteúdo HTML e o envia de volta ao navegador. Pode haver interações adicionais entre o navegador e o servidor \cite{aplicacoesWeb}
+Conforme a \cite{amazonAplicaoWeb} oferecem diversos benefícios como acessibilidade, atualização, redução de custos e escalabilidade.
 
 \subsection{Linguagem JavaScript}
 Uma linguagem de programação amplamente usada no desenvolvimento web de acordo com a organização \cite{mozillaJavaScript}. Ela permite adicionar interatividade e dinamismo a páginas da web. Além de ser usado no desenvolvimento de interfaces de usuário, o JavaScript também pode ser usado no desenvolvimento de aplicativos do lado do servidor (backend) com o uso de tecnologias como o Node.js. Conforme \cite{flanagan2012javascript} ''Javascript já deixou para trás suas raízes como linguagem de script há muito tempo, tornando-se uma linguagem de uso geral, robusta e eficiente''
@@ -115,14 +117,52 @@ O contexto dos padrões de desenvolvimento de software está relacionado aos des
 
 
 \subsection{Arquitetura Cliente Servidor}
-Amplamente utilizado em sistemas de computação distribuída. Nessa arquitetura, o software é dividido em duas partes principais: o cliente e o servidor.
-O cliente é a parte do sistema que interage diretamente com o usuário. Ele envia solicitações de serviço ao servidor e exibe os resultados recebidos ao usuário. O cliente pode ser um aplicativo de desktop, um aplicativo móvel ou um navegador da web, dependendo do tipo de sistema que está sendo desenvolvido.
-O servidor é responsável por processar as solicitações recebidas do cliente e fornecer os recursos ou serviços solicitados. Ele possui os recursos necessários para atender às solicitações, como bancos de dados, aplicativos e serviços web. O servidor está sempre ativo, aguardando solicitações dos clientes e respondendo a elas de maneira apropriada.
-A comunicação entre o cliente e o servidor ocorre por meio de uma rede, geralmente a Internet. O cliente envia uma solicitação para o servidor, especificando o tipo de serviço desejado e quaisquer parâmetros necessários. O servidor processa a solicitação, executa as ações necessárias e envia a resposta de volta ao cliente. Essa comunicação pode ser baseada em diferentes protocolos, como HTTP, TCP/IP ou UDP.
-Uma das principais vantagens da arquitetura cliente-servidor é a divisão clara de responsabilidades entre o cliente e o servidor. O cliente lida com a interface do usuário e a apresentação dos dados, enquanto o servidor cuida do processamento das solicitações e do acesso aos recursos. Isso permite uma melhor organização do sistema e facilita a manutenção e a escalabilidade.
-Além disso, a arquitetura cliente-servidor permite que vários clientes acessem o mesmo servidor simultaneamente. Isso possibilita o compartilhamento de recursos e serviços, o que é especialmente útil em sistemas distribuídos e ambientes empresariais.
+Nessa arquitetura, o software é dividido em duas partes principais: o cliente e o servidor.
+O cliente é a parte do sistema que interage diretamente com o usuário. Ele envia solicitações de serviço ao servidor e exibe os resultados recebidos ao usuário. O cliente pode ser um aplicativo de desktop, um aplicativo móvel ou um navegador da web, dependendo do tipo de sistema que está sendo desenvolvido.\cite{flanagan2012javascript}
+
+O servidor é responsável por processar as solicitações recebidas do cliente e fornecer os recursos ou serviços solicitados. Ele possui os recursos necessários para atender às solicitações, como bancos de dados, aplicativos e serviços web. O servidor está sempre ativo, aguardando solicitações dos clientes e respondendo a elas de maneira apropriada.\cite{arqClientServer2}
+
+A comunicação entre o cliente e o servidor ocorre por meio de uma rede, geralmente a Internet. O cliente envia uma solicitação para o servidor, especificando o tipo de serviço desejado e quaisquer parâmetros necessários.
+Então de acordo com 
+\begin{citacao}
+	\cite{arqClientServer2} 
+O servidor, quando recebe a mensagem, extrai os parâmetros 
+e chama o procedimento especificado na mensagem. No fim da execução do procedimento é 
+realizada a operação inversa, colocando os resultados e enviando a mensagem de resposta ao 
+processo cliente
+\end{citacao}
+Logo uma das principais vantagens da arquitetura cliente-servidor é a divisão clara de responsabilidades entre o cliente e o servidor. 
+O cliente lida com a interface do usuário e a apresentação dos dados, enquanto o servidor cuida do processamento das solicitações e do acesso aos recursos. Isso permite uma melhor organização do sistema e facilita a manutenção e a escalabilidade.
+Além disso, a arquitetura cliente-servidor permite que vários clientes acessem o mesmo servidor simultaneamente. Isso possibilita o compartilhamento de recursos e serviços, o que é especialmente útil em ambientes corporativos.\cite{arqClientServer2}
+
+A \autoref{fig:grafico-client-server}demonstra a maneira como ocorre essa comunicação:
+
+\begin{figure}[htb]
+    \caption{\label{fig:grafico-client-server}Arquitetura Cliente-Servidor}
+    \begin{center}
+        \includegraphics[scale=0.9]{imagens/arquitetura-cliente-servidor.png}
+    \end{center}
+    \legend{Fonte: \citeonline{RedesP2P67:online}}
+\end{figure}
+
 
 \subsection{Arquitetura MVC}
+A arquitetura MVC \textit{Model-View-Controller} é um padrão de design que organiza o código de uma aplicação em três componentes principais: \textit{Model} (Modelo), \textit{View} (Visão) e \textit{Controller} (Controlador). Cada componente tem uma responsabilidade específica na aplicação, o que ajuda a manter o código modular, escalável e de fácil manutenção\cite{engsoftmoderna}
+
+\begin{itemize}
+    \item Visão: Lida com a apresentação dos dados ao usuário e interage com o Modelo. A Visão exibe as informações e envia eventos do usuário para o Controlador.
+    \item Controlador: Recebe entradas do usuário, processa essas entradas (geralmente envolvendo o Modelo) e atualiza a Visão. O Controlador age como um intermediário entre o Modelo e a Visão.
+    \item Modelo: Representa a lógica de negócios e os dados da aplicação. Geralmente, o modelo é responsável pela interação com o banco de dados e pela manipulação dos dados.
+\end{itemize}
+Conforme exemplificado o fluxo da arquitetura MVC na \autoref{fig:grafico-mvc}
+
+\begin{figure}[htb]
+    \caption{\label{fig:grafico-mvc}Arquitetura MVC}
+    \begin{center}
+        \includegraphics[scale=0.7]{imagens/arquitetura-mvc.png}
+    \end{center}
+    \legend{Fonte: \citeonline{engsoftmoderna}}
+\end{figure}
 
 \section{Frameworks}
 
