@@ -36,7 +36,7 @@ Neste capitulo é abordado o referencial teórico, utilizado como embasamento pa
 Atualmente no Brasil existem dois sistemas informatizados utilizados por órgãos públicos para realizar a regulamentação e o monitoramento de armas de fogo, munições e demais produtos controlados.
 Sendo estes,o Sistema de Gerenciamento Militar de Armas (SIGMA) e o Sistema Nacional de Armas (SINARM). O SIGMA é administrado pelo Exército Brasileiro e é responsável pelo controle de armas de fogo e munições no âmbito da Força. O SINARM é administrado pela Polícia Federal e é responsável pelo controle de armas de fogo e munições em poder da população civil.\cite{shotEntendaSinarm}
 
-\subsection{SIGMA e SINARM}
+\subsection{SIGMA e SINARM}\label{sigmaesinarm}
 A principal diferença entre SIGMA e SINARM é o âmbito de atuação. O SIGMA é responsável pelo controle de armas de fogo e munições no âmbito do Exército Brasileiro, enquanto o SINARM é responsável pelo controle de armas de fogo e munições em poder da população civil.
 Outra diferença entre os dois sistemas é a natureza das informações que eles gerenciam. O SIGMA gerencia informações sobre armas de fogo e munições de uso militar, enquanto o SINARM gerencia informações sobre armas de fogo e munições de uso civil.
 A seguir, está uma tabela comparativa que resume as principais diferenças entre ambos: 
@@ -177,31 +177,36 @@ Sendo estes estruturas ou conjuntos de ferramentas que fornecem uma base organiz
 
 \subsubsection{Principais Frameworks Web}
 Principais frameworks utilizados para o desenvolvimento de aplicações web 
-\begin{itemize}
-    \item Node: O node é um ambiente de tempo de execução JavaScript que permite que o JavaScript seja executado no lado do servidor. Ele usa o mecanismo de JavaScript V8 do Google Chrome para executar código JavaScript fora do navegador. Com o Node.js, é possível criar aplicativos web e serviços backend usando JavaScript. Ele fornece uma variedade de recursos e uma ampla gama de bibliotecas e frameworks, tornando-o uma escolha popular para o desenvolvimento de servidores e APIs. Conforme aborda  ( RIBEIRO, CAIO , 2013) “Node.js é multiprotocolo, ou seja, com ele será possível trabalhar com os protocolos: HTTP, HTTPS, FTP, SSH, DNS, TCP, UDP, WebSockets e também existem outros.  Toda aplicação web necessita de um servidor para disponibilizar todos os seus  recursos”
-    \item Express: Framework para aplicativos web do lado do servidor construído em cima do Node.js. Ele fornece uma abordagem simplificada para lidar com solicitações HTTP, roteamento e manipulação de middleware. O Express permite criar facilmente APIs robustas e eficientes, tornando o desenvolvimento de aplicativos web mais rápido e produtivo. É um dos frameworks mais populares para o desenvolvimento de servidores com Node.js
-    \item React: React é uma biblioteca JavaScript de código aberto usada para criar interfaces de usuário. Ele permite criar componentes reutilizáveis e interativos para construir interfaces de usuário modernas e responsivas.  Você pode criar aplicações nativas com desempenho e controles
-	nativos ''controles realmente nativos, e não cópias com aparência nativa'' usando as mesmas ideias de construção de componentes e Uis". (Stoyan Stefanov editora Novatec 2019).
-	O React usa uma abordagem baseada em componentes, o que facilita a criação e o gerenciamento do estado dos elementos da interface. Ele também permite a criação de aplicativos de página única (SPAs) eficientes e escaláveis. O React é frequentemente combinado com outras bibliotecas e frameworks, como o Redux, para gerenciar o estado global do aplicativo.
+\begin{itemize}\label{nodejs}
+    \item Node: Conforme o site oficial do \cite{Nodejs}, ele é um ambiente de tempo de execução JavaScript que permite que o JavaScript seja executado no lado do servidor. Utilizando o mecanismo de JavaScript V8 do Google Chrome para executar código JavaScript fora do navegador.
+	
+    Com o Node.js, é possível criar aplicativos web e serviços \textit{backend} usando JavaScript. Ele fornece uma variedade de recursos e uma ampla gama de bibliotecas e frameworks, tornando-o uma escolha popular para o desenvolvimento de servidores e APIs. \cite{Nodejs}
+    De acordo com 
+    \begin{citacao}
+        \cite{pereira2014aplicações} 
+        Node.js é multiprotocolo, ou seja, com ele será possível trabalhar com os protocolos: HTTP, HTTPS, FTP, SSH, DNS, TCP, UDP, WebSockets e também existem outros.Toda aplicação web necessita de um servidor para disponibilizar todos os seus  recursos
+    \end{citacao}
 
+    \item Express: Framework para aplicativos web do lado do servidor construído em cima do framework abordado na \autoref{nodejs}. 
+     Ele fornece uma abordagem simplificada para lidar com solicitações HTTP, roteamento e manipulação de middleware. 
+	 O Express permite criar facilmente APIs robustas e eficientes, tornando o desenvolvimento de aplicativos web mais rápido e produtivo. É um dos frameworks mais populares para o desenvolvimento de servidores com Node.js 
+     \cite{pereira2014aplicações}
+    \item React: É uma biblioteca JavaScript \textit{Open Source} usada para criar interfaces de usuário. Ele permite criar componentes reutilizáveis e interativos para construir interfaces de usuário modernas e responsivas.  Tornando possível a criação de aplicações nativas com desempenho e controles nativos \cite{ReactMet54}.
+    O React usa uma abordagem baseada em componentes, o que facilita a criação e o gerenciamento do estado dos elementos da interface.Permitindo a criação de aplicações eficientes e escaláveis.\cite{ReactMet54}
 \end{itemize}
-
 
 \section{Banco de dados NOSQL}
-Banco de dados NoSQL é um tipo de banco de dados que difere dos bancos de dados relacionais tradicionais (SQL) em sua estrutura de armazenamento e modelo de dados. NoSQL significa "Not Only SQL" (Não Apenas SQL) e abrange diversos tipos de bancos de dados que oferecem uma abordagem alternativa para o armazenamento e recuperação de dados.
-MongoDB é um exemplo popular de banco de dados NoSQL. Ele é um sistema de gerenciamento de banco de dados orientado a documentos, o que significa que os dados são armazenados em documentos semelhantes a JSON, em vez de tabelas com linhas e colunas como em um banco de dados relacional.
+Banco de dados NoSQL é um tipo de banco de dados que difere dos bancos de dados relacionais tradicionais (SQL) em sua estrutura de armazenamento e modelo de dados. NoSQL significa \textit{Not Only SQL} (Não Apenas SQL) e abrange diversos tipos de bancos de dados que oferecem uma abordagem alternativa para o armazenamento e recuperação de dados.
+conforme \cite{pereira2014aplicações} uma das vantagens em se trabalhar com um banco de dados desse modelo é o grande suporte oferecido pela comunidade do nodejs e uma vasta gama de compatibilidade com diversas tecnologias.
+Dentre as principais tecnologias que tem uma alta sinergia nesse padrão não relacional são: 
 
-Uma das principais vantagens do MongoDB é sua flexibilidade no esquema de dados. Ao contrário dos bancos de dados relacionais, o MongoDB não exige um esquema fixo, o que significa que cada documento pode ter uma estrutura diferente. Isso permite uma maior agilidade no desenvolvimento, especialmente em projetos que envolvem dados não estruturados ou que precisam se adaptar facilmente a mudanças nos requisitos.
-Outra característica importante do MongoDB é sua capacidade de escalar horizontalmente. Ele permite a distribuição dos dados em vários servidores, possibilitando o aumento da capacidade de armazenamento e do desempenho do banco de dados conforme a demanda cresce.
-Além disso, o MongoDB oferece recursos avançados, como indexação, consultas poderosas e suporte a transações, tornando-o adequado para uma ampla gama de aplicações. É frequentemente utilizado em aplicativos web, análise de dados, IoT (Internet das Coisas) e outras aplicações que exigem flexibilidade e escalabilidade.
 
 \begin{itemize}
-    \item MongoDB: mongo
-    \item Mongoose: mongoose
-
+    \item MongoDB: um eficiente e popular de banco de dados NoSQL. Que utiliza um sistema de gerenciamento de banco de dados orientado a documentos, o que significa que os dados são armazenados em documentos semelhantes a JSON, em vez de tabelas com linhas e colunas como em um banco de dados relacional.\cite{pereira2014aplicações}
+    Outra característica importante do MongoDB é sua capacidade de escalar horizontalmente. Oferecendo recursos avançados, como indexação, consultas poderosas e suporte a transações, tornando-o adequado para uma ampla gama de aplicações. É frequentemente utilizado em aplicativos web, análise de dados, e outras aplicações que exigem flexibilidade e escalabilidade \cite{pereira2014aplicações}
+    \item Mongoose:  Uma biblioteca ODM \textit{Object Data Modeling} para Node.js e MongoDB. Sendo inserido como uma camada de abstração facilitando a conexão, modelagem de dados, a execução de consultas, e a interação com o banco de dados de maneira eficiente e organizada\cite{pereira2014aplicações}
 
 \end{itemize}
-
 
 
 % \section{Backend}
@@ -210,23 +215,38 @@ Além disso, o MongoDB oferece recursos avançados, como indexação, consultas 
 % \subsection{Apis Restful}
 
 \subsection{Segurança e autenticação}
+A segurança e autenticação em aplicações web são fundamentais para proteger dados e usuários. Utilizando criptografia,  e práticas de desenvolvimento seguro, é possível mitigar riscos, garantindo a integridade e confiabilidade do sistema. Estratégias como autenticação por token e hashing de senhas fortalecem a proteção, assegurando uma navegação online para o usuário segura e confiável.\cite{segurancaeauth}
 
 \begin{itemize}
-    \item Passport-Local: O Passport-local é uma estratégia de autenticação fornecida pelo Passport.js para autenticar usuários usando um nome de usuário e senha em aplicativos Node.js. Ele é facilmente integrado a qualquer aplicativo ou framework que suporte middlewares do estilo Connect, incluindo o Express. O Passport-local requer um retorno de chamada de verificação que valida as credenciais do usuário. Ele pode ser configurado para realizar a autenticação localmente, verificando o nome de usuário e a senha no banco de dados do aplicativo. 
-    \item Token JWT: jwt
+    \item Passport-Local: De acordo com o site oficial do \cite{passport84}, este é uma estratégia de autenticação fornecida pelo Passport.js para autenticar usuários usando um nome de usuário e senha em aplicativos Node.js. Ele é facilmente integrado a qualquer aplicativo ou framework que suporte middlewares do estilo \textit{Connect}, incluindo o Express. O Passport-local requer um retorno de chamada de verificação que valida as credenciais do usuário. Ele pode ser configurado para realizar a autenticação localmente, verificando o nome de usuário e a senha no banco de dados da aplicação. 
+    \item Token JWT: \textit{JSON Web Token} (JWT) fornece uma abordagem segura para a troca de informações entre cliente e servidor por meio de um token gerado o qual o resultado final é um objeto JSON, conforme explicado por  
+    \begin{citacao}
+        \cite{segurancaeauth} 
+        O token gerado pelo JWT é salvo
+        no dispositivo do usuário e suas informações podem ser verificadas a cada solicitação,
+        pois são criptografadas utilizando um segredo, através do algoritmo \textit{HMAC} ou de um par de chaves públicas e privadas, garantindo assim a sua confiabilidade
+    \end{citacao}
+    Na \autoref{fig:grafico-jwt} exemplifica o fluxo de autenticação por token jwt: 
 
-
+\begin{figure}
+    \caption{\label{fig:grafico-jwt} Fluxo de autenticação JWT}
+    \begin{center}
+        \includegraphics[scale=0.6]{imagens/jwt.png}
+    \end{center}
+    \legend{Fonte: \citeonline{segurancaeauth}}
+\end{figure}
+    
 \end{itemize}
 
-\section{Frontend}
-É a parte de um sistema ou aplicação que os usuários interagem diretamente. Envolve a criação da interface do usuário, a implementação de elementos visuais, como layout, design, botões, formulários, etc., e a interação com o usuário por meio de eventos e ações. Para o desenvolvimento front-end, são utilizadas tecnologias como HTML (Hypertext Markup Language), CSS (Cascading Style Sheets) e JavaScript. Todo o HTML e o CSS que escrevemos ganha vida dentro dos navegadores utilizados por quem acessa nossas páginas e sites (MAZZA LUCAS, 2012)
+% \section{Frontend}
+% É a parte de um sistema ou aplicação que os usuários interagem diretamente. Envolve a criação da interface do usuário, a implementação de elementos visuais, como layout, design, botões, formulários, etc., e a interação com o usuário por meio de eventos e ações. Para o desenvolvimento front-end, são utilizadas tecnologias como HTML (Hypertext Markup Language), CSS (Cascading Style Sheets) e JavaScript. Todo o HTML e o CSS que escrevemos ganha vida dentro dos navegadores utilizados por quem acessa nossas páginas e sites (MAZZA LUCAS, 2012)
 
-\begin{itemize}
-    \item HTML: (HyperText Markup Language) é a linguagem de marcação usada para estruturar e exibir o conteúdo de uma página da web. Ele fornece uma estrutura básica para a criação de elementos, como cabeçalhos, parágrafos, listas, links e imagens. O HTML é a espinha dorsal de qualquer página da web e é complementado por CSS e JavaScript para fornecer estilos e interatividade.
-    \item CSS: CSS (Cascading Style Sheets) é uma linguagem usada para estilizar a aparência dos elementos em uma página da web. Ele permite controlar cores, fontes, margens, posicionamento e outros aspectos visuais dos elementos HTML. O CSS é usado em conjunto com o HTML para criar layouts atraentes e responsivos. Ele oferece flexibilidade para personalizar o estilo de um site e torná-lo visualmente agradável para os usuários. 
+% \begin{itemize}
+%     \item HTML: (HyperText Markup Language) é a linguagem de marcação usada para estruturar e exibir o conteúdo de uma página da web. Ele fornece uma estrutura básica para a criação de elementos, como cabeçalhos, parágrafos, listas, links e imagens. O HTML é a espinha dorsal de qualquer página da web e é complementado por CSS e JavaScript para fornecer estilos e interatividade.
+%     \item CSS: CSS (Cascading Style Sheets) é uma linguagem usada para estilizar a aparência dos elementos em uma página da web. Ele permite controlar cores, fontes, margens, posicionamento e outros aspectos visuais dos elementos HTML. O CSS é usado em conjunto com o HTML para criar layouts atraentes e responsivos. Ele oferece flexibilidade para personalizar o estilo de um site e torná-lo visualmente agradável para os usuários. 
 
 
-\end{itemize}
+% \end{itemize}
  
 
 
@@ -823,22 +843,6 @@ Além disso, o MongoDB oferece recursos avançados, como indexação, consultas 
 % exemplos das conversões mais importantes. Preste atenção especial para `ç' e `í'
 % que devem estar envoltos em chaves. A regra geral é sempre usar a acentuação
 % neste modo quando houver conversão para letras maiúsculas.
-
-\begin{table}[htbp]
-\caption{Tabela de conversão de acentuação.}
-\label{tabela-acentos}
-
-\begin{center}
-\begin{tabular}{ll}\hline\hline
-acento & \textsf{bibtex}\\
-à á ã & \verb+\`a+ \verb+\'a+ \verb+\~a+\\
-í & \verb+{\'\i}+\\
-ç & \verb+{\c c}+\\
-\hline\hline
-\end{tabular}
-\end{center}
-\end{table}
-
 
 % % ---
 % \section{Precisa de ajuda?}
