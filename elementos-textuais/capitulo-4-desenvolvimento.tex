@@ -1,6 +1,6 @@
 \chapter{Desenvolvimento da aplicação AutoForm}
 % ---
-Neste capitulo é apresentado o desenvolvimento do projeto, onde são apresentados, a arquitetura do sistema, as tecnologias utilizadas,e a implementação do sistema.
+Neste capitulo é apresentado o desenvolvimento do projeto, onde são apresentados,arquitetura do sistema,o processo de produção, e a implementação do sistema.
 
 \subsection{Processo de produção}
 O projeto teve sua fase inicial, após o 1º encontro com o cliente Tiago Costa e o coorientador Márcio Lemos no \textit{campus} Osório do IFRS, conforme demonstrado a necessidade pela BMRS de uma aplicação que pudesse ser utilizada para auxiliar no processo de registro do AEL no SIGMA, a fim de agilizar o processo de preenchimento e automatizar a geração do arquivo, bem como resolver outras dificuldades encontradas pelos operadores.
@@ -8,6 +8,7 @@ Após a definição de contexto do AEL por parte da BM RS, foi realizado um estu
 
 Com a elicitação dos requisitos concluída, ocorreu a prototipação das telas da aplicação, utilizando a ferramenta de \textit{design de interface } de usuário \cite{figma}, a fim de validar se o visual e o fluxo da aplicação iriam atender o proposito da instituição.
 
+\subsubsection{Tecnologias}\label{sec:tecnologias}
 Após a validação do protótipo, foi realizada a escolha das tecnologias que seriam utilizadas no desenvolvimento da aplicação, sendo elas o \textit{framework} \cite{React22:online}, para o desenvolvimento \textit{frontend}, e o \textit{framework} NodeJS \cite{Nodejs} para o desenvolvimento do \textit{backend} da aplicação web, juntamente com o banco de dados não relacional \cite{MongoDBA45:online}, para o armazenamento dos dados.
 
 Com as tecnologias definidas, foi realizado o desenvolvimento da aplicação web e hospedado em um servidor, para que fosse possível realizar os testes e validações com o cliente, e assim, realizar as correções necessárias. 
@@ -16,8 +17,110 @@ Portanto após a primeira versão da aplicação estar disponível na \textit{in
 
 Para permitir que fosse possível realizar atualizações em produção na aplicação foi utilizada a ferramente\cite{git}, juntamente com a plataforma de hospedagem de código fonte \cite{github}, para que fosse possível realizar o controle de versões e o versionamento do código fonte da aplicação, garantindo sempre uma versão estável e disponivel em produção, enquanto era viável desenvolver paralelamente novas funcionalidades e valida-las com o cliente.
 
+\subsection{Arquitetura da aplicação}
+Nesta seção será abordado a visão de como foi projetado a estrutura do sistema que é composto por uma aplicação web, e uma API.
 
-\subsection{Aplicação Web }
+A Arquitetura \textit{MVC} foi a escolhida para a estruturação do sistema, ficando então dispostas as tecnologias mencionadas na \autoref{sec:tecnologias} da seguinte maneira ilustradas pela  \autoref{fig:diagramstacks}.
+
+\begin{figure}[htb]
+    \caption{\label{fig:diagramstacks}Disposição das tecnologias na arquitetura MVC}
+    \begin{center}
+        \includegraphics[scale=0.5]{imagens/diagrama.png}
+    \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
+
+
+Toda comunicação entre a aplicação web e a API é realizada através de requisições HTTP, onde a aplicação web realiza requisições para a API, e a API responde com os dados solicitados, caso necessário a API busca as informações no banco de dados e retorna para a aplicação web.
+As requisições e respostas seguem o padrão REST, onde cada requisição possui um método HTTP, e um \textit{endpoint} que é a URL que identifica o recurso que está sendo solicitado, e a resposta da requisição é um JSON, que contém os dados solicitados.
+
+
+
+\subsection{Aplicação Web AutoForm}
+
+\begin{figure}[htb]
+    \caption{\label{fig:tela-cadastro}Autoform - Pagina de login}
+    \begin{center}
+        \includegraphics[scale=0.5]{imagens/login-autoform.png}
+    \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
+
+\begin{figure}[htb]
+    \caption{\label{fig:tela-registro}Autoform - Pagina de registros}
+    \begin{center}
+        \includegraphics[scale=0.6]{imagens/registro-autoform.png}   
+     \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
+
+\begin{figure}[htb]
+    \caption{\label{fig:tela-home}Autoform - Pagina inicial home}
+    \begin{center}
+        \includegraphics[scale=0.5]{imagens/home-autoform.png}
+    \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
+
+\begin{figure}[htb]
+    \caption{\label{fig:tela-ael1}Autoform - Pagina criação AEL}
+    \begin{center}
+        \includegraphics[scale=0.5]{imagens/autoform-ael-gerar.png}
+    \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
+
+\begin{figure}[htb]
+    \caption{\label{fig:tela-ael1}Autoform - Pagina criação AEL com opção para selecionar}
+    \begin{center}
+        \includegraphics[scale=0.5]{imagens/autoform-ael-selecao.png}
+    \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
+
+\begin{figure}[htb]
+    \caption{\label{fig:tela-ael2}Autoform - Pagina criação AEL -2}
+    \begin{center}
+        \includegraphics[scale=0.5]{imagens/autoform-ael-gerar2.png}
+    \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
+\begin{figure}[htb]
+    \caption{\label{fig:tela-ael3}Autoform - Pagina criação AEL-3}
+    \begin{center}
+        \includegraphics[scale=0.5]{imagens/autoform-ael-gerar3.png}
+    \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
+\begin{figure}[htb]
+    \caption{\label{fig:tela-ael4}Autoform - Pagina criação AEL-4}
+    \begin{center}
+        \includegraphics[scale=0.5]{imagens/autoform-ael-gerar4.png}
+    \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
+\begin{figure}[htb]
+    \caption{\label{fig:tela-ael-gerado}Autoform - AEL gerado}
+    \begin{center}
+        \includegraphics[scale=0.5]{imagens/autoform-ael-gerado.png}
+    \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
+\begin{figure}[htb]
+    \caption{\label{fig:tela-cadastros-armas}Autoform - Cadastros}
+    \begin{center}
+        \includegraphics[scale=0.5]{imagens/autoform-cadastros.png}
+    \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
+\begin{figure}[htb]
+    \caption{\label{fig:tela-configuracoes}Autoform - Configurações}
+    \begin{center}
+        \includegraphics[scale=0.5]{imagens/autoform-configuracoes.png}
+    \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
+
 
 
 % Este capítulo possui também exemplos de como inserir código no texto.
