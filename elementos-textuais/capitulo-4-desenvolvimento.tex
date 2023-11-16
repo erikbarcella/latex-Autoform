@@ -32,46 +32,82 @@ A Arquitetura \textit{MVC} foi a escolhida para a estruturação do sistema, fic
 
 
 Toda comunicação entre a aplicação web e a API é realizada através de requisições HTTP, onde a aplicação web realiza requisições para a API, e a API responde com os dados solicitados, caso necessário a API busca as informações no banco de dados e retorna para a aplicação web.
+
 As requisições e respostas seguem o padrão REST, onde cada requisição possui um método HTTP, e um \textit{endpoint} que é a URL que identifica o recurso que está sendo solicitado, e a resposta da requisição é um JSON, que contém os dados solicitados.
 
 
 
 \subsection{Aplicação Web AutoForm}
 
+\subsubsection{Autenticação}
+
+A página para acessar a aplicação \autoref{fig:tela-login} e a página de registro \autoref{fig:tela-registro} são de acesso público, portanto podem ser visualizadas sem a necessidade de autenticação, já as demais páginas é necessário realizar o login.
+
+A estratégia empregada para o acesso consiste na autenticação por meio de token JWT. O usuário realiza o login, fornecendo sua identificação de funcionário e senha. Essas informações são então encaminhadas para a API por meio de uma requisição POST. 
+A API valida no banco de dados a existência de um usuário com os dados fornecidos. 
+Se a validação for bem-sucedida, a API gera um token de acesso e o retorna como resposta. Posteriormente, a aplicação decodifica o token recebido, que contém as informações do usuário no \textit{payload}, e armazena os dados de identificação no navegador da pessoa que solicitou o acesso.
+
+E a cada requisição posterior para outros \textit{endpoints} que a aplicação realize para a API, o token é enviado no cabeçalho da requisição,e a API irá validar somente o token, e caso seja válido retorna os dados solicitados.
+
+\subsubsection{Página de login}
+Está página é responsavel por realizar a autenticação do usuário, e para isso é necessário informar a identificação de funcionário e a senha, e caso o usuário não possua cadastro, é possível realizar o registro, clicando no botão "Registrar-se", que redireciona para a página de registro.
+
 \begin{figure}[htb]
-    \caption{\label{fig:tela-cadastro}Autoform - Pagina de login}
+    \caption{\label{fig:tela-login}Autoform - Página de login}
     \begin{center}
         \includegraphics[scale=0.5]{imagens/login-autoform.png}
     \end{center}
     \legend{Fonte: Autor}
 \end{figure}
 
+ Se, por acaso, a validação no banco de dados não for bem-sucedida, a API emite uma resposta personalizada, indicando a natureza específica do impedimento.
+
+Em um cenário em que a Identificação de Funcionário ou a senha fornecida não corresponde aos registros existentes, um alerta sutil é gerado, informando ao usuário sobre a disparidade. Este mecanismo proativo visa aprimorar a eficiência da correção do erro, direcionando o usuário a revisar e corrigir suas credenciais antes de prosseguir com a autenticação.
+Ademais, é importante ressaltar que, em situações extremas, como indisponibilidade temporária do serviço de autenticação, o usuário é informado sobre a impossibilidade de acesso, e orientado a tentar novamente mais tarde.
+
+\subsubsection{Página de registro}
+A página de registro \autoref{fig:tela-registro} é responsável por realizar o cadastro de novos usuários, e para isso é necessário informar o email, a identificação de funcionário, a senha, e a confirmação da senha, em caso de sucesso será retornada uma mensagem informando que o registro foi efetuado com sucesso.
+
 \begin{figure}[htb]
-    \caption{\label{fig:tela-registro}Autoform - Pagina de registros}
+    \caption{\label{fig:tela-registro}Autoform - Página de registros}
     \begin{center}
         \includegraphics[scale=0.6]{imagens/registro-autoform.png}   
      \end{center}
     \legend{Fonte: Autor}
 \end{figure}
+Caso a identificação de funcionário já esteja cadastrada, será retornado uma mensagem informando que a identificação de funcionário já está cadastrada.
+Em caso de não conformidade da senha com a confirmação da senha, será retornado uma mensagem informando que as senhas não conferem.
+
+\subsubsection{Página inicial}
+A página \autoref{fig:tela-home} é a página inicial da aplicação, e nela é possível visualizar no menu lateral as opções disponíveis de criação de AEL, cadastros, e configurações.
 
 \begin{figure}[htb]
-    \caption{\label{fig:tela-home}Autoform - Pagina inicial home}
+    \caption{\label{fig:tela-home}Autoform - Página inicial home}
     \begin{center}
         \includegraphics[scale=0.5]{imagens/home-autoform.png}
     \end{center}
     \legend{Fonte: Autor}
 \end{figure}
 
+\subsubsection{Página de criação de AEL}
+A página de criação de AEL \autoref{fig:tela-ael1} é responsável por realizar a criação de um registro e geração do AEL, sendo necessário informar os campos obrigatórios que constam no \autoref{sec:anexoA2} e \autoref{sec:anexoA3}
+Cada registro é salvo no \textit{local storage} do navegador do usuário com todas informações fornecidas no formulário, para posterior geração do arquivo. 
+Essa estrategia de armazenamento temporário foi adota visando manter a integridade e a segurança das informações caso o usuário perca a conexão com a internet ou por algum outro motivo a aplicação do navegador seja encerrada, o que acarretaria na perca de todos os registros já inseridos, utilizando essa abordagem é possível resgatar da memoria do navegador as informações já inseridas para geração do AEL, sem necessidade de armazenar ou enviar pela rede dados sensíveis como CPF entre outros. 
+
 \begin{figure}[htb]
-    \caption{\label{fig:tela-ael1}Autoform - Pagina criação AEL}
+    \caption{\label{fig:tela-ael1}Autoform - Página criação AEL}
     \begin{center}
         \includegraphics[scale=0.5]{imagens/autoform-ael-gerar.png}
     \end{center}
     \legend{Fonte: Autor}
 \end{figure}
 
+
+Na \autoref{fig:tela-ael-selecao} podemos visualizar um input que exibe uma lista com as armas cadastradas, facilitando o preenchimento de diversos campos do formulário.
+Pois permite o usúario selecionar arma já cadastrada, e os campos serão preenchidos automaticamente.
+
 \begin{figure}[htb]
-    \caption{\label{fig:tela-ael1}Autoform - Pagina criação AEL com opção para selecionar}
+    \caption{\label{fig:tela-ael-selecao}Autoform - Página criação AEL com opção para selecionar}
     \begin{center}
         \includegraphics[scale=0.5]{imagens/autoform-ael-selecao.png}
     \end{center}
@@ -79,26 +115,28 @@ As requisições e respostas seguem o padrão REST, onde cada requisição possu
 \end{figure}
 
 \begin{figure}[htb]
-    \caption{\label{fig:tela-ael2}Autoform - Pagina criação AEL -2}
+    \caption{\label{fig:tela-ael2}Autoform - Página criação AEL -2}
     \begin{center}
         \includegraphics[scale=0.5]{imagens/autoform-ael-gerar2.png}
     \end{center}
     \legend{Fonte: Autor}
 \end{figure}
 \begin{figure}[htb]
-    \caption{\label{fig:tela-ael3}Autoform - Pagina criação AEL-3}
+    \caption{\label{fig:tela-ael3}Autoform - Página criação AEL-3}
     \begin{center}
         \includegraphics[scale=0.5]{imagens/autoform-ael-gerar3.png}
     \end{center}
     \legend{Fonte: Autor}
 \end{figure}
+
 \begin{figure}[htb]
-    \caption{\label{fig:tela-ael4}Autoform - Pagina criação AEL-4}
+    \caption{\label{fig:tela-ael4}Autoform - Página criação AEL-4}
     \begin{center}
         \includegraphics[scale=0.5]{imagens/autoform-ael-gerar4.png}
     \end{center}
     \legend{Fonte: Autor}
 \end{figure}
+
 \begin{figure}[htb]
     \caption{\label{fig:tela-ael-gerado}Autoform - AEL gerado}
     \begin{center}
