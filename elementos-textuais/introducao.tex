@@ -11,12 +11,14 @@ Sua criação e implementação foram conduzidas pelo Ministério da Defesa, em 
 \cite{ExércitoBrasileiro}
 
 
-Na Brigada Militar do Rio Grande do Sul, o setor administrativo de cadastros e registros é responsável por controlar e manter diversos processos administrativos que abrangem uma variedade de assuntos relacionados às atividades e operações da instituição militar, inclusive interligados a outros órgãos públicos. 
+Na Brigada Militar do Rio Grande do Sul, o setor administrativo de cadastros e registros é responsável por controlar e manter diversos processos que abrangem uma variedade de assuntos relacionados às atividades e operações da instituição militar, inclusive interligados a outros órgãos públicos. 
 \cite{bmDepartamentoAdministrativo}
 
 Portanto um dos processos administrativos mantidos pela corporação é a geração do AEL, onde atualmente esta tarefa é realizada pelos seus operadores de forma manual preenchendo os dados necessários em um arquivo de texto, seguido da formatação e adequação do documento ao modelo padrão estabelecido pelo Exército Brasileiro, que possui regras específicas de indexação das informações conforme especificado no manual de preenchimento do arquivo eletrônico (anexo \ref{sec:anexoA1}). 
 
-Após a geração do arquivo eletrônico, o mesmo é submetido para avaliação da Diretoria de Fiscalização de Produtos Controlados do Exército, que irá verificar as informações contidas no arquivo e fazer o \textit{upload} para o SIGMA, após validação do sistema, em caso de sucesso do cadastro, é retornado um numero de identificação único gerado pelo SIGMA, o qual é utilizado pelo exercito para localizar o respectivo registro e todas suas informações dentro do SIGMA quando necessário e pela Brigada como retorno de que o cadastro daquele processo foi efetivado e finalizado.\cite{ExércitoBrasileiro}
+Após a geração do arquivo eletrônico, o mesmo é submetido para avaliação da Diretoria de Fiscalização de Produtos Controlados do Exército, que irá verificar as informações contidas no arquivo e fazer o \textit{upload} para o SIGMA, após validação do sistema, em caso de sucesso do cadastro, é retornado um numero de identificação único gerado pelo SIGMA, o qual é utilizado pelo exército para identificar o respectivo registro e todas suas informações dentro do SIGMA quando necessário.\cite{ExércitoBrasileiro} 
+
+E utilizado pela Brigada o número de identificação gerado pelo SIGMA como retorno de que o cadastro daquele processo foi efetivado na base de dados e finalizado, conforme evidenciado na (seção 3.4 alínea C do (anexo \ref{sec:anexoA4})).
 
 Entretanto no momento atual o AEL é formatado manualmente pelo operador após o preenchimento, implicando em uma maior complexidade na execução dessa tarefa,sendo assim a proposta deste trabalho é desenvolver uma aplicação web que automatize o processo de geração do arquivo eletrônico visando simplificar significativamente o procedimento, através do preenchimento facilitado proporcionando resultados mais eficazes e alavancando a excelência operacional da instituição
 
