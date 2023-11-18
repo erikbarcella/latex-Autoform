@@ -34,7 +34,7 @@ Neste capitulo é abordado o referencial teórico, utilizado como embasamento pa
 % ---
 \section{ Controle na Segurança Publica Brasileira }
 Atualmente no Brasil existem dois sistemas informatizados utilizados por órgãos públicos para realizar a regulamentação e o monitoramento de armas de fogo, munições e demais produtos controlados.
-Sendo estes, o Sistema de Gerenciamento Militar de Armas (SIGMA) e o Sistema Nacional de Armas (SINARM). O SIGMA é administrado pelo Exército Brasileiro e é responsável pelo controle de armas de fogo e munições no âmbito da Força. O SINARM é administrado pela Polícia Federal e é responsável pelo controle de armas de fogo e munições em poder da população civil\cite{shotEntendaSinarm}.
+Sendo estes, o Sistema de Gerenciamento Militar de Armas (SIGMA) e o Sistema Nacional de Armas (SINARM). O SIGMA é administrado pelo Exército Brasileiro e é responsável pelo controle de armas de fogo e munições no âmbito da Força. O SINARM é administrado pela Polícia Federal e é responsável pelo controle de armas de fogo e munições em poder da população civil \cite{shotEntendaSinarm}.
 
 \subsection{SIGMA e SINARM}\label{sigmaesinarm}
 A principal diferença entre SIGMA e SINARM é o âmbito de atuação. O SIGMA é responsável pelo controle de armas de fogo e munições no âmbito do Exército Brasileiro, enquanto o SINARM é responsável pelo controle de armas de fogo e munições em poder da população civil.
@@ -60,56 +60,58 @@ A seguir, está uma tabela comparativa que resume as principais diferenças entr
 % \cite{inDECRETO9847}
 
 \section{ Sistema SIGMA } 
-O Sistema de Gerenciamento Militar de Armas (SIGMA) é um sistema computacional desenvolvido pelo Centro de Desenvolvimento de Sistemas (CDS) do Exército Brasileiro e  implantado em 2003 que vem sendo constantemente atualizado para atender às necessidades da força\cite{fenemeReunixE3oSobre}.
+O Sistema de Gerenciamento Militar de Armas (SIGMA) é um sistema computacional desenvolvido pelo Centro de Desenvolvimento de Sistemas (CDS) do Exército Brasileiro e  implantado em 2003 que vem sendo constantemente atualizado para atender às necessidades da força \cite{fenemeReunixE3oSobre}.
 
 \subsection{Contexto de implantação}
 O contexto da implantação do SIGMA foi a necessidade de modernizar o sistema de controle de armas de fogo e munições do Exército Brasileiro.
-O SIGMA foi desenvolvido com base nas melhores práticas internacionais de controle de armas de fogo. O sistema é integrado a outros sistemas de informação do Exército Brasileiro, o que permite a troca de dados e informações entre as diferentes áreas da força\cite{fenemeReunixE3oSobre}.
+O SIGMA foi desenvolvido com base nas melhores práticas internacionais de controle de armas de fogo. O sistema é integrado a outros sistemas de informação do Exército Brasileiro, o que permite a troca de dados e informações entre as diferentes áreas da força \cite{fenemeReunixE3oSobre}.
 
 \subsection{AEL}
 O Arquivo Eletrônico em Lote (AEL) é um arquivo digital que contém as informações necessárias para o cadastro de produtos controlado no SIGMA.
-O AEL é utilizado para o cadastro de armas de fogo de diversas entidades, como as Forças Armadas, as forças auxiliares, a Polícia Militar e o Corpo de Bombeiros\cite{ExércitoBrasileiro}.
+O AEL é utilizado para o cadastro de armas de fogo de diversas entidades, como as Forças Armadas, as forças auxiliares, a Polícia Militar e o Corpo de Bombeiros \cite{ExércitoBrasileiro}.
 
-O Objetivo do AEL no sistema SIGMA é permitir o cadastro de produtos controlados de diversas entidades de forma centralizada e organizada. O AEL é um elemento importante do SIGMA, pois permite que o Exército Brasileiro tenha um controle mais eficiente das armas de fogo em circulação no país\cite{ExércitoBrasileiro}.
+O Objetivo do AEL no sistema SIGMA é permitir o cadastro de produtos controlados de diversas entidades de forma centralizada e organizada. O AEL é um elemento importante do SIGMA, pois permite que o Exército Brasileiro tenha um controle mais eficiente das armas de fogo em circulação no país \cite{ExércitoBrasileiro}.
 
 \subsection{Arquivo AEL na Brigada Militar do Rio Grande do Sul}
 O AEL no contexto da BM RS, deve ser gerado para o cadastro de armas de fogo de policiais militares. O arquivo deve conter as seguintes informações:
 \begin{itemize}
     \item Identificação da Brigada Militar: número do QG, código da OM e nome da OM.
-    \item Identificação do armamento: número da arma, tipo de arma, marca, modelo, calibre, série.
+    \item Identificação do armamento: número da arma, tipo de arma, marca, modelo, calibre e série.
     \item Identificação do proprietário: nome completo, CPF, RG, endereço e telefone.
+    \item Além das demais informações especificadas nos anexos \ref{sec:anexoA2} e \ref{sec:anexoA3}.
 \end{itemize}
-Além das demais informações especificadas nos anexos \ref{sec:anexoA2} e \ref{sec:anexoA3}.
+
 
 O AEL deve ser gerado em um formato texto, seguindo um layout pré-definido e estar conforme os parâmetros de indexação das informações constantes nos anexos \ref{sec:anexoA1} e \ref{sec:anexoA4}.
 
 \section{Gerenciamento de processos}
 É uma abordagem disciplinada e sistemática que envolve práticas relacionadas aos processos de negócio, automatizados ou não, com o objetivo de alcançar resultados consistentes e alinhados com as metas estratégicas de uma organização. 
-Conforme \cite{davila2008inovaccao}''As organizações tentam inovar para se diferenciar e obter vantagens competitivas, tanto pela melhoria nos bens/serviços fornecidos quanto pela eficiência operativa''
+Conforme \citeonline{davila2008inovaccao} ``As organizações tentam inovar para se diferenciar e obter vantagens competitivas, tanto pela melhoria nos bens/serviços fornecidos quanto pela eficiência operativa''.
  Pode-se concluir que os sistemas de informação oferecem inúmeros benefícios para uma organização, sejam eles para melhorar o fluxo de informação, as tomadas de decisões, o controle de qualidade, ou ampliar a produtividade.
 \subsection{BPMN}
-O modelo e notação de processos de negócios (\textit{Business Process Model and Notation}) é uma notação gráfica padronizada para desenhar processos de negócios em um fluxograma. A diagramação BPMN é intuitiva e permite a representação de detalhes complexos do processo. A simbologia deste modelo serve como uma linguagem padrão, colocando um fim na lacuna de comunicação entre a modelagem do processo e sua execução, para Aryslene, Débora e Maria.
+O modelo e notação de processos de negócios (\textit{Business Process Model and Notation}) é uma notação gráfica padronizada para desenhar processos de negócios em um fluxograma. A diagramação BPMN é intuitiva e permite a representação de detalhes complexos do processo. A simbologia deste modelo serve como uma linguagem padrão, colocando um fim na lacuna de comunicação entre a modelagem do processo e sua execução, para \citeonline{bitencourt2016elicitaccao}:
 \begin{citacao}
 	
-	Modelo de processos de negocio representa os processos de negocio de uma empresa e permite a documentação, simulação, compartilhamento, implementação, avaliação e melhoramento continuo das operações, com o intuito de compreender o funcionamento da organização e os aspectos do seu domínio \cite{bitencourt2016elicitaccao}.
+	Modelo de processos de negócio representa os processos de negócio de uma empresa e permite a documentação, simulação, compartilhamento, implementação, avaliação e melhoramento continuo das operações, com o intuito de compreender o funcionamento da organização e os aspectos do seu domínio \cite{bitencourt2016elicitaccao}.
 	
 \end{citacao}
 Em resumo, o levantamento e registro da situação atual dos processos, seguido por uma análise aprofundada, são práticas essenciais para promover a eficiência, a eficácia e a adaptação contínua dentro de uma organização. Essa abordagem sistemática para entender e aprimorar os processos é fundamental para a sustentabilidade organizacional.
 
 \section{Padrões de Projeto de Sistemas}
-Padrões de desenvolvimento de software referem-se a soluções reutilizáveis para problemas comuns encontrados no processo de desenvolvimento de software. Esses padrões são abstrações que encapsulam as melhores práticas, representando soluções testadas e comprovadas para desafios recorrentes. Eles fornecem diretrizes para o design e implementação de código, promovendo a consistência, a manutenibilidade e a eficiência no desenvolvimento de software\cite{padroesProjeto}.
+Padrões de desenvolvimento de software referem-se a soluções reutilizáveis para problemas comuns encontrados no processo de desenvolvimento de software. Esses padrões são abstrações que encapsulam as melhores práticas, representando soluções testadas e comprovadas para desafios recorrentes. Eles fornecem diretrizes para o design e implementação de código, promovendo a consistência, a manutenibilidade e a eficiência no desenvolvimento de software \cite{padroesProjeto}.
 
-O contexto dos padrões de desenvolvimento de software está relacionado aos desafios enfrentados pelos desenvolvedores ao criar sistemas de software complexos. Para \cite{padroesProjeto} ''Um padrão de projeto nomeia, abstrai e identifica aspectos problemáticos comuns e propõe uma solução padrão para esses problemas''.
+O contexto dos padrões de desenvolvimento de software está relacionado aos desafios enfrentados pelos desenvolvedores ao criar sistemas de software complexos. Conforme abordado por \citeonline{padroesProjeto} ``Um padrão de projeto nomeia, abstrai e identifica aspectos problemáticos comuns e propõe uma solução padrão para esses problemas''.
 
 
 \subsection{Arquitetura Cliente Servidor}
 Nessa arquitetura, o software é dividido em duas partes principais: o cliente e o servidor.
+
 O cliente é a parte do sistema que interage diretamente com o usuário. Ele envia solicitações de serviço ao servidor e exibe os resultados recebidos ao usuário. O cliente pode ser um aplicativo de desktop, um aplicativo móvel ou um navegador da web, dependendo do tipo de sistema que está sendo desenvolvido \cite{flanagan2012javascript}.
 
 O servidor é responsável por processar as solicitações recebidas do cliente e fornecer os recursos ou serviços solicitados. Ele possui os recursos necessários para atender às solicitações, como bancos de dados, aplicativos e serviços web. O servidor está sempre ativo, aguardando solicitações dos clientes e respondendo a elas de maneira apropriada \cite{arqClientServer2}.
 
 A comunicação entre o cliente e o servidor ocorre por meio de uma rede, geralmente a Internet. O cliente envia uma solicitação para o servidor, especificando o tipo de serviço desejado e quaisquer parâmetros necessários.
-Então de acordo com Henrique
+Então de acordo com \citeonline{arqClientServer2}.
 \begin{citacao}
 O servidor, quando recebe a mensagem, extrai os parâmetros 
 e chama o procedimento especificado na mensagem. No fim da execução do procedimento é 
@@ -117,11 +119,11 @@ realizada a operação inversa, colocando os resultados e enviando a mensagem de
 processo cliente \cite{arqClientServer2}.
 \end{citacao}
 
-    Logo uma das principais vantagens da arquitetura cliente-servidor é a divisão clara de responsabilidades entre o cliente e o servidor. 
+    Logo uma das principais vantagens da arquitetura cliente-servidor é a divisão clara de responsabilidades entre ambos. 
 O cliente lida com a interface do usuário e a apresentação dos dados, enquanto o servidor cuida do processamento das solicitações e do acesso aos recursos. Isso permite uma melhor organização do sistema e facilita a manutenção e a escalabilidade.
 Além disso, a arquitetura cliente-servidor permite que vários clientes acessem o mesmo servidor simultaneamente. Isso possibilita o compartilhamento de recursos e serviços, o que é especialmente útil em ambientes corporativos \cite{arqClientServer2}.
 
-A \autoref{fig:grafico-client-server}demonstra a maneira como ocorre essa comunicação:
+A \autoref{fig:grafico-client-server} demonstra a maneira como ocorre essa comunicação:
 
 \begin{figure}[htb]
     \caption{\label{fig:grafico-client-server}Arquitetura Cliente-Servidor}
@@ -156,17 +158,16 @@ Aplicações web são programas que são executados em navegadores e são acessa
 Surgiram na década de 1990 e se tornaram populares por permitirem a interação do usuário e o processamento de dados.
 
 Existem dois tipos principais: estáticas (HTML, CSS e JavaScript) e dinâmicas (linguagens de programação do lado do servidor).
-De acordo com \cite{aplicacoesWeb} as aplicações estáticas geralmente consistem em páginas web com conteúdo fixo, sem interação avançada ou processamento de dados em tempo real. O navegador do cliente solicita páginas estáticas ao servidor, que retorna arquivos HTML, CSS e JavaScript. A renderização e interação ocorrem no navegador.
+De acordo com \citeonline{aplicacoesWeb} as aplicações estáticas geralmente consistem em páginas web com conteúdo fixo, sem interação avançada ou processamento de dados em tempo real. O navegador do cliente solicita páginas estáticas ao servidor, que retorna arquivos HTML, CSS e JavaScript. A renderização e interação ocorrem no navegador.
 
-Aplicações Dinâmicas apresentam interatividade avançada e processamento de dados em tempo real quando o navegador solicita uma página ao servidor. O servidor executa a lógica de negócios, acessa dados do banco de dados, gera dinamicamente o conteúdo HTML e o envia de volta ao navegador. Pode haver interações adicionais entre o navegador e o servidor \cite{aplicacoesWeb}
-oferecendo diversos benefícios como acessibilidade, atualização, redução de custos e escalabilidade.
+Aplicações Dinâmicas apresentam interatividade avançada e processamento de dados em tempo real quando o navegador solicita uma página ao servidor. O servidor executa a lógica de negócios, acessa dados do banco de dados, gera dinamicamente o conteúdo HTML e o envia de volta ao navegador. Pode haver interações adicionais entre o navegador e o servidor 
+oferecendo diversos benefícios como acessibilidade, atualização, redução de custos e escalabilidade \cite{aplicacoesWeb}.
 
 \subsection{Linguagem JavaScript}
-Uma linguagem de programação amplamente usada no desenvolvimento web de acordo com a organização \cite{mozillaJavaScript}. Ela permite adicionar interatividade e dinamismo a páginas da web. Além de ser usado no desenvolvimento de interfaces de usuário, o JavaScript também pode ser usado no desenvolvimento de aplicativos do lado do servidor (backend) com o uso de tecnologias como o Node.js. Conforme \cite{flanagan2012javascript} ''Javascript já deixou para trás suas raízes como linguagem de script há muito tempo, tornando-se uma linguagem de uso geral, robusta e eficiente''.
+Uma linguagem de programação amplamente usada no desenvolvimento web de acordo com a organização \citeonline{mozillaJavaScript}. Ela permite adicionar interatividade e dinamismo a páginas da web. Além de ser usado no desenvolvimento de interfaces de usuário, o JavaScript também pode ser usado no desenvolvimento de aplicativos do lado do servidor (backend) com o uso de tecnologias como o Node.js. Conforme \citeonline{flanagan2012javascript} ``Javascript já deixou para trás suas raízes como linguagem de script há muito tempo, tornando-se uma linguagem de uso geral, robusta e eficiente''.
 
-\subsection{Frameworks}
+\subsection{Frameworks e Bibliotecas}
 A necessidade da utilização de \textit{frameworks} surgiu com a complexidade crescente das aplicações de software.
-Conforme abordado por Maldonado, José, Rosana, Fernando e Paulo : 
 \begin{citacao}
 	Diversos \textit{frameworks} têm sido desenvolvidos nas duas últimas décadas, visando o
 	reuso de software e consequentemente a melhoria da produtividade, qualidade e
@@ -174,28 +175,60 @@ Conforme abordado por Maldonado, José, Rosana, Fernando e Paulo :
 \end{citacao}
 Sendo estes estruturas ou conjuntos de ferramentas que fornecem uma base organizada para o desenvolvimento de aplicações. Eles oferecem uma estrutura pré-definida que acelera o processo de desenvolvimento, promove a reutilização de código e estabelece padrões de boas práticas. No contexto do desenvolvimento de software, os frameworks desempenham um papel significativo, influenciando a forma como as aplicações são projetadas, implementadas e mantidas \cite{maldonado2002padroes}.
 
-\subsubsection{Principais Frameworks Web}
-Principais frameworks utilizados para o desenvolvimento de aplicações web 
-\begin{itemize}\label{nodejs}
-    \item Node: Conforme o site oficial do \cite{Nodejs}, ele é um ambiente de tempo de execução JavaScript que permite que o JavaScript seja executado no lado do servidor. Utilizando o mecanismo de JavaScript V8 do Google Chrome para executar código JavaScript fora do navegador.
-	
-    Com o Node.js, é possível criar aplicativos web e serviços \textit{backend} usando JavaScript. Ele fornece uma variedade de recursos e uma ampla gama de bibliotecas e frameworks, tornando-o uma escolha popular para o desenvolvimento de servidores e APIs \cite{Nodejs}.
-    De acordo com 
+Portanto para \citeonline[p.~23]{maldonado2002padroes} os \textit{frameworks} estão divido em dois tipos sendo eles:
+\begin{itemize}
+    \item Caixa preta: Uma abordagem caixa preta trata um sistema ou componente como uma entidade onde o foco está no comportamento externo, sem conhecimento detalhado de sua implementação interna, pois na maioria dos casos o desenvolvedor não tem acesso ao código fonte e a ênfase está nos resultados visíveis e nas funcionalidades oferecidas pelo sistema, sem a necessidade de compreender a lógica interna do sistema \cite[p.~23]{maldonado2002padroes}.
+    \item Caixa branca: Em contraste, uma abordagem caixa branca envolve uma compreensão detalhada da implementação interna de um sistema ou componente, incluindo sua lógica, estrutura e fluxo de controle e a ênfase está na compreensão completa do sistema, possibilitando otimizações, depuração precisa e ajustes finos \cite[p.~23]{maldonado2002padroes}.
+\end{itemize}
+
+Entretanto muito semelhante aos \textit{frameworks} exceto por algumas diferenças abordados na \autoref{tab:comparacao_bibliotecas_frameworks}, existem também as bibliotecas de \textit{software} que são conjuntos de códigos preexistentes e funcionalidades encapsuladas que foram desenvolvidos para abordar tarefas comuns ao desenvolvimento de sistemas. 
+Conforme \citeonline{cechinel2017avaliaccao} torna-se evidente que esses recursos desempenham um papel fundamental na eficiência e na evolução contínua do desenvolvimento de \textit{software}. Desde a reutilização inteligente de código até a adaptação às inovações tecnológicas.
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabularx}{\textwidth}{X X X}
+      \toprule
+      \textbf{Característica} & \textbf{Bibliotecas} & \textbf{Frameworks} \\
+      \midrule
+      Definição & Fornecem funcionalidades específicas. & Oferecem uma estrutura abrangente. \\
+      \midrule
+      Flexibilidade & Mais flexibilidade para os desenvolvedores. & Menos flexibilidade devido a maiores convenções. \\
+      \midrule
+      Integração & Integração opcional e modular. & Impõem uma estrutura mais integrada. \\
+      \midrule
+      Modularidade & Modular, escolha de partes específicas. & Estrutura monolítica, menos modularidade. \\
+      \bottomrule
+    \end{tabularx}
+    \caption{Comparação Entre Bibliotecas e Frameworks no Desenvolvimento de Software}
+    \label{tab:comparacao_bibliotecas_frameworks}
+  \end{table}
+
+\subsubsection{Node}
+ Conforme o site oficial do \citeonline{Nodejs}, este é um ambiente de tempo de execução javascript que permite que o javascript seja executado no lado do servidor. Utilizando o mecanismo V8 do Google Chrome para executar código javascript fora do navegador.
+ Com o Node.js, é possível criar aplicativos web e serviços \textit{backend} usando javascript. Ele fornece uma variedade de recursos e uma ampla gama de bibliotecas e frameworks, tornando-o uma escolha popular para o desenvolvimento de servidores e APIs \cite{Nodejs}.
+Portanto para \citeonline{pereira2014aplicações}.
     \begin{citacao}
         Node.js é multiprotocolo, ou seja, com ele será possível trabalhar com os protocolos: HTTP, HTTPS, FTP, SSH, DNS, TCP, UDP, WebSockets e também existem outros.Toda aplicação web necessita de um servidor para disponibilizar todos os seus  recursos \cite{pereira2014aplicações}.
     \end{citacao}
 
-    \item Express: Framework para aplicativos web do lado do servidor construído em cima do framework abordado na \autoref{nodejs}. 
+Amplamente utilizado em conjunto com o node, é o framework express para aplicativos web do lado do servidor, construído sob a base nativa HTTP do Node.js.
      Ele fornece uma abordagem simplificada para lidar com solicitações HTTP, roteamento e manipulação de middleware. 
-	 O Express permite criar facilmente APIs robustas e eficientes, tornando o desenvolvimento de aplicativos web mais rápido e produtivo. É um dos frameworks mais populares para o desenvolvimento de servidores com Node.js.
+	 O Express permite criar facilmente APIs robustas e eficientes, tornando o desenvolvimento de aplicativos web mais rápido e produtivo. É um dos frameworks mais populares para o desenvolvimento de servidores com Node.js
      \cite{pereira2014aplicações}.
-    \item React: É uma biblioteca JavaScript \textit{Open Source} usada para criar interfaces de usuário. Ele permite criar componentes reutilizáveis e interativos para construir interfaces de usuário modernas e responsivas.  Tornando possível a criação de aplicações nativas com desempenho e controles nativos \cite{ReactMet54}.
-    O React usa uma abordagem baseada em componentes, o que facilita a criação e o gerenciamento do estado dos elementos da interface.Permitindo a criação de aplicações eficientes e escaláveis \cite{ReactMet54}.
-\end{itemize}
+
+\subsubsection{ReactJS}
+React é uma biblioteca javascript \textit{Open Source} lançado em 2013 pela \citeonline{ReactMet54}, que rapidamente ganhou popularidade devido a sua abordagem inovadora utilizada para criar interfaces de usuário. 
+Através da possibilidade de escrever código utilizando a sintaxe JSX, a qual é uma convenção opcional no react que possibilita ter a organização do código javascript de maneira mais próxima à estrutura de marcação XML ou HTML.
+
+    Logo essa biblioteca permite desenvolver componentes reutilizáveis e interativos utilizados na construção de \textit{UIS} modernas e responsivas. Possibilitando o desenvolvimento de aplicações web complexas e dinâmicas, dividindo-as em componentes reutilizáveis \citeonline{ReactMet54}.
+
+    A partir da premissa de que a abordagem principal do React é baseada em componentes, isso facilita a criação e o gerenciamento de estado dos elementos da interface. Permitindo a criação de aplicações eficientes e escaláveis, sendo como principal característica a renderização reativa, o que faz com que a interface do usuário seja atualizada automaticamente quando o estado dos dados é alterado. Isso simplifica o desenvolvimento e melhora o desempenho, pois apenas as partes afetadas da interface são atualizadas, em vez de recarregar a página inteira \cite{ReactMet54}.
 
 \section{Banco de dados NOSQL}
 Banco de dados NoSQL é um tipo de banco de dados que difere dos bancos de dados relacionais tradicionais (SQL) em sua estrutura de armazenamento e modelo de dados. NoSQL significa \textit{Not Only SQL} (Não Apenas SQL) e abrange diversos tipos de bancos de dados que oferecem uma abordagem alternativa para o armazenamento e recuperação de dados.
-conforme \cite{pereira2014aplicações} uma das vantagens em se trabalhar com um banco de dados desse modelo é o grande suporte oferecido pela comunidade do nodejs e uma vasta gama de compatibilidade com diversas tecnologias.
+Para \citeonline{pereira2014aplicações} uma das vantagens em se trabalhar com um banco de dados desse modelo é o grande suporte oferecido pela comunidade do nodejs e uma vasta gama de compatibilidade com diversas tecnologias.
+
 Dentre as principais tecnologias que tem uma alta sinergia nesse padrão não relacional são: 
 
 
@@ -228,7 +261,7 @@ A segurança e a autenticação em aplicações web são fundamentais para prote
 \begin{figure}
     \caption{\label{fig:grafico-jwt} Fluxo de autenticação JWT}
     \begin{center}
-        \includegraphics[scale=0.6]{imagens/jwt.png}
+        \includegraphics[scale=0.9]{imagens/jwt.png}
     \end{center}
     \legend{Fonte: \citeonline{segurancaeauth}}
 \end{figure}

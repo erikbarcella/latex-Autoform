@@ -3,19 +3,19 @@
 Neste capitulo é apresentado o desenvolvimento do projeto, onde são apresentados, a arquitetura do sistema, o processo de produção, e a implementação do sistema.
 
 \subsection{Processo de produção}
-O projeto teve sua fase inicial, após o 1º encontro com o cliente Tiago Costa e o coorientador Márcio Lemos no \textit{campus} Osório do IFRS, na reunião foi demonstrada a necessidade pela BMRS de uma aplicação que pudesse ser utilizada para auxiliar no processo de registro do AEL no SIGMA, a fim de agilizar o processo de preenchimento e automatizar a geração do arquivo, bem como resolver outras dificuldades encontradas pelos operadores.
+O projeto teve sua fase inicial, após o 1º encontro com o cliente Tiago Costa e o coorientador Márcio Lemos no \textit{campus} Osório do IFRS, na reunião foi demonstrada a necessidade pela BM RS de uma aplicação que pudesse ser utilizada para auxiliar no processo de registro do AEL no SIGMA, a fim de agilizar o processo de preenchimento e automatizar a geração do arquivo, bem como resolver outras dificuldades encontradas pelos operadores.
 Após a definição de contexto do AEL por parte da BM RS, foi realizado um estudo sobre o assunto, para que fosse possível entender o problema e propor uma solução viável e eficaz. 
 
-Com a elicitação dos requisitos concluída, ocorreu a prototipação das telas da aplicação, utilizando a ferramenta de \textit{design de interface } de usuário \cite{figma}, a fim de validar se o visual e o fluxo da aplicação iriam atender o proposito da instituição.
+Com a elicitação dos requisitos concluída, ocorreu a prototipação das telas da aplicação, utilizando a ferramenta de \textit{design de interface } de usuário \citeonline{figma}, a fim de validar se o visual e o fluxo da aplicação iriam atender o proposito da instituição.
 
 \subsubsection{Tecnologias}\label{sec:tecnologias}
-Após a validação do protótipo, foi realizada a escolha das tecnologias que seriam utilizadas no desenvolvimento da aplicação, sendo elas o \textit{framework} \cite{ReactMet54}, para o desenvolvimento \textit{frontend}, e o \textit{framework} NodeJS \cite{Nodejs} para o desenvolvimento do \textit{backend} da aplicação web, juntamente com o banco de dados não relacional \cite{MongoDBA45:online}, para o armazenamento dos dados.
+Após a validação do protótipo, foi realizada a escolha das tecnologias que seriam utilizadas no desenvolvimento da aplicação, sendo elas o \textit{framework} \citeonline{ReactMet54}, para o desenvolvimento \textit{frontend}, e o \textit{framework} NodeJS \citeonline{Nodejs} para o desenvolvimento do \textit{backend} da aplicação web, juntamente com o banco de dados não relacional \citeonline{MongoDBA45:online}, para o armazenamento dos dados.
 
 Com as tecnologias definidas, foi realizado o desenvolvimento da aplicação web e hospedado em um servidor, para que fosse possível realizar os testes e validações com o cliente, e assim, realizar as correções necessárias. 
 
 Portanto após a primeira versão da aplicação estar disponível na \textit{internet} as adaptações necessárias e atualizações eram organizadas e relatadas mediante troca de mensagens com o cliente.
 
-Para permitir que fosse possível realizar atualizações em produção na aplicação foi utilizada a ferramente\cite{git}, juntamente com a plataforma de hospedagem de código fonte \cite{github}, para que fosse possível realizar o controle de versões e o versionamento do código fonte da aplicação, garantindo sempre uma versão estável e disponivel em produção, enquanto era viável desenvolver paralelamente novas funcionalidades e valida-las com o cliente.
+Para permitir que fosse possível realizar atualizações em produção na aplicação foi utilizada a ferramenta \citeonline{git}, juntamente com a plataforma de hospedagem de código fonte \citeonline{github}, para que fosse possível realizar o controle de versões e o versionamento do código fonte da aplicação, garantindo sempre uma versão estável e disponível em produção, enquanto era viável desenvolver paralelamente novas funcionalidades e valida-las com o cliente.
 
 \subsection{Arquitetura da aplicação}
 Nesta seção será abordado a visão de como foi projetado a estrutura do sistema que é composto por uma aplicação web, e uma API.
@@ -50,7 +50,7 @@ Se a validação for bem-sucedida, a API gera um token de acesso e o retorna com
 A cada requisição posterior para outros \textit{endpoints} que a aplicação realize para a API, o token é enviado no cabeçalho da requisição. A API irá validar somente o token, e caso seja válido retorna os dados solicitados.
 
 \subsubsection{Página de login}
-Está página é responsavel por realizar a autenticação do usuário, e para isso é necessário informar a identificação de funcionário e a senha. Caso o usuário não possua cadastro, é possível realizar o registro, clicando no botão "Registrar-se", que redireciona para a página de registro.
+Está página é responsável por realizar a autenticação do usuário, e para isso é necessário informar a identificação de funcionário e a senha. Caso o usuário não possua cadastro, é possível realizar o registro, clicando no botão "Registrar-se", que redireciona para a página de registro.
 
 \begin{figure}[htb]
     \caption{\label{fig:tela-login}Autoform - Página de login}
@@ -94,9 +94,9 @@ A página de criação de AEL, \autoref{fig:tela-ael1}, é responsável por real
 
 Cada registro é salvo no \textit{local storage} do navegador do usuário com todas informações preenchidas no formulário, para posterior geração do arquivo. 
 
-Essa estrategia de armazenamento temporário foi adota visando manter a integridade e a segurança das informações caso o usuário perca a conexão com a internet ou por algum outro motivo a aplicação do navegador seja encerrada, o que acarretaria na perca de todos os registros já digitados, utilizando essa abordagem é possível resgatar da memoria do navegador todos os registros salvos temporariamente para geração do AEL, sem necessidade de armazenar no banco de dados ou enviar pela rede informações sensíveis como CPF entre outros. 
+Essa estratégia de armazenamento temporário foi adota visando manter a integridade e a segurança das informações caso o usuário perca a conexão com a internet ou por algum outro motivo a aplicação do navegador seja encerrada, o que acarretaria na perca de todos os registros já digitados, utilizando essa abordagem é possível resgatar da memoria do navegador todos os registros salvos temporariamente para geração do AEL, sem necessidade de armazenar no banco de dados ou enviar pela rede informações sensíveis como CPF entre outros. 
 \begin{figure}[htb]
-    \caption{\label{fig:tela-ael1}Autoform - Página criação AEL}
+    \caption{\label{fig:tela-ael1}Autoform - Página de criação do AEL}
     \begin{center}
         \includegraphics[scale=0.5]{imagens/autoform-ael-gerar.png}
     \end{center}
@@ -105,10 +105,10 @@ Essa estrategia de armazenamento temporário foi adota visando manter a integrid
 
 \subsubsection{Página de criação de AEL com opção de autopreenchimento}
 Na \autoref{fig:tela-ael-selecao} podemos visualizar um input que exibe uma lista com as armas cadastradas, facilitando o preenchimento de diversos campos do formulário,
-Pois permite Ao usuário selecionar uma arma já cadastrada, e os respectivos campos do formulário serão preenchidos automaticamente.
+pois permite ao usuário selecionar uma arma previamente cadastrada, e os respectivos campos do formulário serão preenchidos automaticamente.
 
 \begin{figure}[H]
-    \caption{\label{fig:tela-ael-selecao}Autoform - Página criação AEL com opção para selecionar}
+    \caption{\label{fig:tela-ael-selecao}Autoform - Página de criação do AEL com opção para selecionar}
     \begin{center}
         \includegraphics[scale=0.3]{imagens/autoform-ael-selecao.png}
     \end{center}
@@ -116,14 +116,14 @@ Pois permite Ao usuário selecionar uma arma já cadastrada, e os respectivos ca
 \end{figure}
 
 \begin{figure}[H]
-    \caption{\label{fig:tela-ael2}Autoform - Página criação AEL -2}
+    \caption{\label{fig:tela-ael2}Autoform - Página de criação do AEL -2}
     \begin{center}
         \includegraphics[scale=0.5]{imagens/autoform-ael-gerar2.png}
     \end{center}
     \legend{Fonte: Autor}
 \end{figure}
 \begin{figure}[H]
-    \caption{\label{fig:tela-ael3}Autoform - Página criação AEL-3}
+    \caption{\label{fig:tela-ael3}Autoform - Página de criação do AEL-3}
     \begin{center}
         \includegraphics[scale=0.5]{imagens/autoform-ael-gerar3.png}
     \end{center}
@@ -131,7 +131,7 @@ Pois permite Ao usuário selecionar uma arma já cadastrada, e os respectivos ca
 \end{figure}
 
 \begin{figure}[H]
-    \caption{\label{fig:tela-ael4}Autoform - Página criação AEL-4}
+    \caption{\label{fig:tela-ael4}Autoform - Página de criação do AEL-4}
     \begin{center}
         \includegraphics[scale=0.5]{imagens/autoform-ael-gerar4.png}
     \end{center}
@@ -143,10 +143,10 @@ Telas do formulário web para geração do AEL
 Os botões da \autoref{fig:tela-ael4} tem as seguintes funcionalidades:
 \begin{itemize}
     \item Salvar: Verifica se todos os campos obrigatórios foram preenchidos, e caso estejam preenchidos, salva o registro no \textit{local storage} do navegador.
-    \item Gerar Arquivo: Com base nos registros salvos no \textit{local storage}, a aplicação realiza a normalização das informações de acordo com as regras específicas de indexação contidas nos anexos \autoref{sec:anexoA1} e \autoref{sec:anexoA2}.Após pergunta ao usuário o nome do AEL e gera automaticamente o arquivo com base no nome inserido, realizando o download do arquivo AEL para o navegador do usuário que solicitou o recurso. 
+    \item Gerar Arquivo: Com base nos registros salvos no \textit{local storage}, a aplicação realiza a normalização das informações de acordo com as regras específicas de indexação contidas nos anexos \autoref{sec:anexoA1} e \autoref{sec:anexoA2}. Após pergunta ao usuário o nome do AEL e gera automaticamente o arquivo com base no nome inserido, realizando o download do arquivo AEL para o navegador do usuário que solicitou o recurso. 
     \item Limpar: Este botão exibe uma mensagem perguntando ao usuário se deseja limpar Nº linhas de registros contidos no armazenamento local do navegador.  Após confirmada a ação os registros temporários são apagados. 
     Esta opção foi implementada para garantir que após gerar o arquivo o usuário possa apagar os registros antigos para inserir novos. E também como garantia de segurança, limpando todos os dados do armazenamento temporário para  que não fique nenhuma informação sensível salva no navegador do usuário.
-    \item Cancelar: Esse botão tem como intuito apenas direcionar o usuário para a pagina inicial da aplicação a \autoref{fig:tela-home}, saindo da opção de criação de AEL sem acarretar na perca dos registros temporários já salvos.
+    \item Cancelar: Esse botão tem como intuito apenas direcionar o usuário para a página inicial da aplicação a \autoref{fig:tela-home}, saindo da opção de criação de AEL sem acarretar na perca dos registros temporários já salvos.
 \end{itemize}
 
 \subsubsection{Exemplo de AEL gerado}
@@ -179,12 +179,13 @@ Nesta página é possível visualizar os cadastros de armas que são armazenadas
 
 \subsubsection{Página de configurações}
 Esta página é acessível somente ao usuário com perfil de administrador.
-Nela é exibido o nome, email e status de autorização dos usúarios cadastrados
-Sendo possivel realizar o gerenciamento destes através dos seguintes botões:
+Nela é exibido o nome, e-mail e status de autorização dos usúarios cadastrados.
+
+Sendo possível realizar o gerenciamento destes através dos seguintes botões:
 \begin{itemize}
     \item Pesquisar: Neste campo é possível realizar uma pesquisa por um usuário específico. Caso seja encontrado o registro, o mesmo será exibido na tabela.
     \item Excluir: Neste botão é possível excluir o registro de usuário. Após a confirmação de exclusão o registro é removido do banco de dados.
-    \item Alterar senha: Neste botão é possível alterar a senha de usuário, onde será exibido um campo para o administrador informar a nova senha e após a confirmação. O registro é atualizado no banco de dados e uma mensagem de sucesso é exibida ao Usuário
+    \item Alterar senha: Neste botão é possível alterar a senha de usuário, onde será exibido um campo para o administrador informar a nova senha e após a confirmação. O registro é atualizado no banco de dados e uma mensagem de sucesso é exibida ao usuário.
     \item Autorizar: Ao utilizar esse botão é possível alterar o status do usuário para autorizado, liberando o acesso a aplicação. O registro é atualizado no banco de dados e uma mensagem de sucesso é exibida ao usuário.
     \item Bloquear: Ao utilizar esse botão é possível alterar o status do usuário para bloqueado, bloqueando o acesso a aplicação. O registro é atualizado no banco de dados e uma mensagem de sucesso é exibida ao usuário.
 \end{itemize}
