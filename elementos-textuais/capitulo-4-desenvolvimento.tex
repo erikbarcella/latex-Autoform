@@ -79,7 +79,7 @@ Caso a identificação de funcionário já esteja cadastrada, será retornada um
 Em caso de não conformidade da senha com a confirmação da senha, será retornada uma mensagem informando que as senhas não conferem.
 
 \subsubsection{Página inicial}
-Esta é a página inicial da aplicação, a qual o usuário é direcionado assim que realiza o login, e nela é possível visualizar no menu lateral as opções disponíveis de criação de AEL, cadastros, e configurações.
+Esta é a página inicial da aplicação, a qual o usuário é direcionado assim que realiza o login, e nela é possível visualizar no menu lateral as opções disponíveis de criação de AEL, cadastros, usuários e sair da aplicação.
 
 \begin{figure}[htb]
     \caption{\label{fig:tela-home}Autoform - Página inicial home}
@@ -90,11 +90,11 @@ Esta é a página inicial da aplicação, a qual o usuário é direcionado assim
 \end{figure}
 
 \subsubsection{Página de criação de AEL}
-A página de criação de AEL, \autoref{fig:tela-ael1}, é responsável por realizar a criação de um registro e geração do AEL, sendo necessário informar os campos obrigatórios que constam nos anexos (\autoref{sec:anexoA2}) e (\autoref{sec:anexoA3}).
+A página de criação de AEL, \autoref{fig:tela-ael1}, é responsável por realizar a criação de um registro e geração do AEL, sendo necessário informar os campos obrigatórios que constam nos anexos \autoref{sec:anexoA2} e \autoref{sec:anexoA3}.
 
 Cada registro é salvo no \textit{local storage} do navegador do usuário com todas informações preenchidas no formulário, para posterior geração do arquivo. 
 
-Essa estratégia de armazenamento temporário foi adota visando manter a integridade e a segurança das informações caso o usuário perca a conexão com a internet ou por algum outro motivo a aplicação do navegador seja encerrada, o que acarretaria na perca de todos os registros já digitados, utilizando essa abordagem é possível resgatar da memoria do navegador todos os registros salvos temporariamente para geração do AEL, sem necessidade de armazenar no banco de dados ou enviar pela rede informações sensíveis como CPF entre outros. 
+Essa estratégia de armazenamento temporário foi adotada visando manter a integridade e a segurança das informações caso o usuário perca a conexão com a internet ou por algum outro motivo a aplicação do navegador seja encerrada, o que acarretaria na perca de todos os registros já digitados, utilizando essa abordagem é possível resgatar da memoria do navegador todos os registros salvos temporariamente para geração do AEL, sem necessidade de armazenar no banco de dados ou enviar pela rede informações sensíveis como CPF entre outros. 
 \begin{figure}[htb]
     \caption{\label{fig:tela-ael1}Autoform - Página de criação do AEL}
     \begin{center}
@@ -143,7 +143,9 @@ Telas do formulário web para geração do AEL
 Os botões da \autoref{fig:tela-ael4} tem as seguintes funcionalidades:
 \begin{itemize}
     \item Salvar: Verifica se todos os campos obrigatórios foram preenchidos, e caso estejam preenchidos, salva o registro no \textit{local storage} do navegador.
-    \item Gerar Arquivo: Com base nos registros salvos no \textit{local storage}, a aplicação realiza a normalização das informações de acordo com as regras específicas de indexação contidas nos anexos \autoref{sec:anexoA1} e \autoref{sec:anexoA2}. Após pergunta ao usuário o nome do AEL e gera automaticamente o arquivo com base no nome inserido, realizando o download do arquivo AEL para o navegador do usuário que solicitou o recurso. 
+    \item Gerar Arquivo: Com base nos registros salvos no \textit{local storage}, a aplicação realiza a normalização das informações de acordo com as regras específicas de indexação contidas nos anexos \autoref{sec:anexoA1} e \autoref{sec:anexoA2}.
+     
+    Após uma caixa de pergunta é exibida ao usuário solicitando o nome do AEL e gera automaticamente o arquivo com base no nome inserido, realizando o download do arquivo AEL para o navegador do usuário que solicitou o recurso. 
     \item Limpar: Este botão exibe uma mensagem perguntando ao usuário se deseja limpar Nº linhas de registros contidos no armazenamento local do navegador.  Após confirmada a ação os registros temporários são apagados. 
     Esta opção foi implementada para garantir que após gerar o arquivo o usuário possa apagar os registros antigos para inserir novos. E também como garantia de segurança, limpando todos os dados do armazenamento temporário para  que não fique nenhuma informação sensível salva no navegador do usuário.
     \item Cancelar: Esse botão tem como intuito apenas direcionar o usuário para a página inicial da aplicação a \autoref{fig:tela-home}, saindo da opção de criação de AEL sem acarretar na perca dos registros temporários já salvos.
@@ -177,7 +179,7 @@ Nesta página é possível visualizar os cadastros de armas que são armazenadas
     \legend{Fonte: Autor}
 \end{figure}
 
-\subsubsection{Página de configurações}
+\subsubsection{Página de administração de usuários}
 Esta página é acessível somente ao usuário com perfil de administrador.
 Nela é exibido o nome, e-mail e status de autorização dos usúarios cadastrados.
 
@@ -191,7 +193,7 @@ Sendo possível realizar o gerenciamento destes através dos seguintes botões:
 \end{itemize}
 
 \begin{figure}[H]
-    \caption{\label{fig:tela-configuracoes}Autoform - Configurações}
+    \caption{\label{fig:tela-configuracoes}Autoform - Administração de usuários}
     \begin{center}
         \includegraphics[scale=0.5]{imagens/autoform-configuracoes.png}
     \end{center}
