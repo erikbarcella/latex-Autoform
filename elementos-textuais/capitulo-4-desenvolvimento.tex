@@ -2,13 +2,13 @@
 % ---
 Neste capitulo é apresentado o desenvolvimento do projeto, onde são apresentados, a arquitetura do sistema, o processo de produção, e a implementação do sistema.
 
-\subsection{Processo de produção}
+\section{Processo de produção}
 O projeto teve sua fase inicial, após o 1º encontro com o cliente Tiago Costa e o coorientador Márcio Lemos no \textit{campus} Osório do IFRS, na reunião foi demonstrada a necessidade pela BM RS de uma aplicação que pudesse ser utilizada para auxiliar no processo de registro do AEL no SIGMA, a fim de agilizar o processo de preenchimento e automatizar a geração do arquivo, bem como resolver outras dificuldades encontradas pelos operadores.
 Após a definição de contexto do AEL por parte da BM RS, foi realizado um estudo sobre o assunto, para que fosse possível entender o problema e propor uma solução viável e eficaz. 
 
 Com a elicitação dos requisitos concluída, ocorreu a prototipação das telas da aplicação, utilizando a ferramenta de \textit{design de interface } de usuário \citeonline{figma}, a fim de validar se o visual e o fluxo da aplicação iriam atender o proposito da instituição.
 
-\subsubsection{Tecnologias}\label{sec:tecnologias}
+\subsection{Tecnologias}\label{sec:tecnologias}
 Após a validação do protótipo, foi realizada a escolha das tecnologias que seriam utilizadas no desenvolvimento da aplicação, sendo elas o \textit{framework} \citeonline{ReactMet54}, para o desenvolvimento \textit{frontend}, e o \textit{framework} NodeJS \citeonline{Nodejs} para o desenvolvimento do \textit{backend} da aplicação web, juntamente com o banco de dados não relacional \citeonline{MongoDBA45:online}, para o armazenamento dos dados.
 
 Com as tecnologias definidas, foi realizado o desenvolvimento da aplicação web e hospedado em um servidor, para que fosse possível realizar os testes e validações com o cliente, e assim, realizar as correções necessárias. 
@@ -35,11 +35,31 @@ Toda comunicação entre a aplicação web e a API é realizada através de requ
 
 As requisições e respostas seguem o padrão REST, onde cada requisição possui um método HTTP, e um \textit{endpoint} que é a URL que identifica o recurso que está sendo solicitado. A resposta da requisição é um JSON, que contém os dados solicitados.
 
+Atuando na camada de modelo da aplicação, o banco de dados é responsável por armazenar os dados da aplicação e foi construido utilizando dois modelos principais para armazenamento não estruturado, o primeiro modelo  representa as informações referente as armas de acordo com a \autoref{fig:diagrama-armas}.
+Já o segundo modelo evidenciado na \autoref{fig:diagrama-user} é utilizado para representar as informações referente aos usuários da aplicação.
+
+\begin{figure}[htb]
+    \caption{\label{fig:diagrama-armas}Diagrama da estrutura de armas}
+    \begin{center}
+        \includegraphics[scale=0.82]{imagens/diagramaArma.png}
+    \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
+
+\begin{figure}[htb]
+    \caption{\label{fig:diagrama-user}Diagrama da estrutura de usúario}
+    \begin{center}
+        \includegraphics[scale=1]{imagens/diagramaUser.png}
+    \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
+
+
 
 
 \subsection{Aplicação Web AutoForm}
 
-\subsubsection{Autenticação}
+\subsection{Autenticação}
 
 A página para acessar a aplicação \autoref{fig:tela-login} e a página de registro \autoref{fig:tela-registro} são de acesso público, portanto podem ser visualizadas sem a necessidade de autenticação, já para acessar as demais páginas é necessário realizar o login.
 
@@ -49,7 +69,7 @@ Se a validação for bem-sucedida, a API gera um token de acesso e o retorna com
 
 A cada requisição posterior para outros \textit{endpoints} que a aplicação realize para a API, o token é enviado no cabeçalho da requisição. A API irá validar somente o token, e caso seja válido retorna os dados solicitados.
 
-\subsubsection{Página de login}
+\subsection{Página de login}
 Está página é responsável por realizar a autenticação do usuário, e para isso é necessário informar a identificação de funcionário e a senha. Caso o usuário não possua cadastro, é possível realizar o registro, clicando no botão "Registrar-se", que redireciona para a página de registro.
 
 \begin{figure}[htb]
@@ -65,7 +85,7 @@ Está página é responsável por realizar a autenticação do usuário, e para 
 Em um cenário em que a Identificação de Funcionário ou a senha fornecida não corresponde aos registros existentes, um alerta sutil é gerado, informando ao usuário sobre a disparidade. Este mecanismo proativo visa aprimorar a eficiência da correção do erro, direcionando o usuário a revisar e corrigir suas credenciais antes de prosseguir com a autenticação.
 Ademais, é importante ressaltar que, em situações extremas, como indisponibilidade temporária do serviço de autenticação, o usuário é informado sobre a impossibilidade de acesso, e orientado a tentar novamente mais tarde.
 
-\subsubsection{Página de registro}
+\subsection{Página de registro}
 A página de registro \autoref{fig:tela-registro} é responsável por realizar o cadastro de novos usuários, e para isso é necessário informar o email, a identificação de funcionário, a senha, e a confirmação da senha. E em caso de sucesso será retornada uma mensagem informando que o registro foi efetuado com sucesso.
 
 \begin{figure}[htb]
@@ -78,7 +98,7 @@ A página de registro \autoref{fig:tela-registro} é responsável por realizar o
 Caso a identificação de funcionário já esteja cadastrada, será retornada uma mensagem informando que a identificação de funcionário já está cadastrada.
 Em caso de não conformidade da senha com a confirmação da senha, será retornada uma mensagem informando que as senhas não conferem.
 
-\subsubsection{Página inicial}
+\subsection{Página inicial}
 Esta é a página inicial da aplicação, a qual o usuário é direcionado assim que realiza o login, e nela é possível visualizar no menu lateral as opções disponíveis de criação de AEL, cadastros, usuários e sair da aplicação.
 
 \begin{figure}[htb]
@@ -89,8 +109,8 @@ Esta é a página inicial da aplicação, a qual o usuário é direcionado assim
     \legend{Fonte: Autor}
 \end{figure}
 
-\subsubsection{Página de criação de AEL}
-A página de criação de AEL, \autoref{fig:tela-ael1}, é responsável por realizar a criação de um registro e geração do AEL, sendo necessário informar os campos obrigatórios que constam nos anexos \autoref{sec:anexoA2} e \autoref{sec:anexoA3}.
+\subsection{Página de criação de AEL}
+A página de criação de AEL, \autoref{fig:tela-ael1}, é responsável por realizar a criação de um registro e geração do AEL, sendo necessário informar os campos obrigatórios que constam no \autoref{sec:anexoA2} e \autoref{sec:anexoA3}.
 
 Cada registro é salvo no \textit{local storage} do navegador do usuário com todas informações preenchidas no formulário, para posterior geração do arquivo. 
 
@@ -103,7 +123,7 @@ Essa estratégia de armazenamento temporário foi adotada visando manter a integ
     \legend{Fonte: Autor}
 \end{figure}
 
-\subsubsection{Página de criação de AEL com opção de autopreenchimento}
+\subsection{Página de criação de AEL com opção de autopreenchimento}
 Na \autoref{fig:tela-ael-selecao} podemos visualizar um input que exibe uma lista com as armas cadastradas, facilitando o preenchimento de diversos campos do formulário,
 pois permite ao usuário selecionar uma arma previamente cadastrada, e os respectivos campos do formulário serão preenchidos automaticamente.
 
@@ -143,7 +163,7 @@ Telas do formulário web para geração do AEL
 Os botões da \autoref{fig:tela-ael4} tem as seguintes funcionalidades:
 \begin{itemize}
     \item Salvar: Verifica se todos os campos obrigatórios foram preenchidos, e caso estejam preenchidos, salva o registro no \textit{local storage} do navegador.
-    \item Gerar Arquivo: Com base nos registros salvos no \textit{local storage}, a aplicação realiza a normalização das informações de acordo com as regras específicas de indexação contidas nos anexos \autoref{sec:anexoA1} e \autoref{sec:anexoA2}.
+    \item Gerar Arquivo: Com base nos registros salvos no \textit{local storage}, a aplicação realiza a normalização das informações de acordo com as regras específicas de indexação contidas no \autoref{sec:anexoA1} e \autoref{sec:anexoA4}.
      
     Após uma caixa de pergunta é exibida ao usuário solicitando o nome do AEL e gera automaticamente o arquivo com base no nome inserido, realizando o download do arquivo AEL para o navegador do usuário que solicitou o recurso. 
     \item Limpar: Este botão exibe uma mensagem perguntando ao usuário se deseja limpar Nº linhas de registros contidos no armazenamento local do navegador.  Após confirmada a ação os registros temporários são apagados. 
@@ -151,7 +171,7 @@ Os botões da \autoref{fig:tela-ael4} tem as seguintes funcionalidades:
     \item Cancelar: Esse botão tem como intuito apenas direcionar o usuário para a página inicial da aplicação a \autoref{fig:tela-home}, saindo da opção de criação de AEL sem acarretar na perca dos registros temporários já salvos.
 \end{itemize}
 
-\subsubsection{Exemplo de AEL gerado}
+\subsection{Exemplo de AEL gerado}
 Exemplo da ação executada após selecionar o botão gerar arquivo, que tem como saída o arquivo AEL formatado.
 
 \begin{figure}[H]
@@ -162,7 +182,7 @@ Exemplo da ação executada após selecionar o botão gerar arquivo, que tem com
     \legend{Fonte: Autor}
 \end{figure}
 
-\subsubsection{Página de cadastros}
+\subsection{Página de cadastros}
 Nesta página é possível visualizar os cadastros de armas que são armazenadas no banco de dados, também é possível realizar uma pesquisa.
 \begin{itemize}
     \item Pesquisar: Neste campo é possível realizar uma pesquisa por uma arma específica, e caso seja encontrado o registro, o mesmo será exibido na tabela.
@@ -179,7 +199,7 @@ Nesta página é possível visualizar os cadastros de armas que são armazenadas
     \legend{Fonte: Autor}
 \end{figure}
 
-\subsubsection{Página de administração de usuários}
+\subsection{Página de administração de usuários}
 Esta página é acessível somente ao usuário com perfil de administrador.
 Nela é exibido o nome, e-mail e status de autorização dos usúarios cadastrados.
 
