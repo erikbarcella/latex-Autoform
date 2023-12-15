@@ -4,9 +4,19 @@ Neste capitulo é apresentado o desenvolvimento do projeto, onde são apresentad
 
 \section{Processo de produção}
 O projeto teve sua fase inicial, após o 1º encontro com o cliente Tiago Costa e o coorientador Márcio Lemos no \textit{campus} Osório do IFRS, na reunião foi demonstrada a necessidade pela BM RS de uma aplicação que pudesse ser utilizada para auxiliar no processo de registro do AEL no SIGMA, a fim de agilizar o processo de preenchimento e automatizar a geração do arquivo, bem como resolver outras dificuldades encontradas pelos operadores.
-Após a definição de contexto do AEL por parte da BM RS, foi realizado um estudo sobre o assunto, para que fosse possível entender o problema e propor uma solução viável e eficaz. 
+Após a definição de contexto do AEL por parte da BM RS, foi realizado um estudo sobre o assunto, para que fosse possível entender o problema e propor uma solução viável e eficaz.
+Sendo demonstrado na  o fluxo desse processo e como a aplicação web AutoForm iria atuar.
+
+\begin{figure}[htb]
+    \caption{\label{fig:diagramaBPMN}Diagrama de processo BPMN}
+    \begin{center}
+        \includegraphics[scale=0.6]{imagens/FluxodeprocessoBPMN.jpeg}
+    \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
 
 Com a elicitação dos requisitos concluída, ocorreu a prototipação das telas da aplicação, utilizando a ferramenta de \textit{design de interface } de usuário \citeonline{figma}, a fim de validar se o visual e o fluxo da aplicação iriam atender o proposito da instituição.
+
 
 \subsection{Tecnologias}\label{sec:tecnologias}
 Após a validação do protótipo, foi realizada a escolha das tecnologias que seriam utilizadas no desenvolvimento da aplicação, sendo elas o \textit{framework} \citeonline{ReactMet54}, para o desenvolvimento \textit{frontend}, e o \textit{framework} NodeJS \citeonline{Nodejs} para o desenvolvimento do \textit{backend} da aplicação web, juntamente com o banco de dados não relacional \citeonline{MongoDBA45:online}, para o armazenamento dos dados.
@@ -22,7 +32,11 @@ Nesta seção será abordado a visão de como foi projetado a estrutura do siste
 
 A Arquitetura \textit{MVC} foi a escolhida para a estruturação do sistema, ficando então dispostas as tecnologias mencionadas na \autoref{sec:tecnologias} da seguinte maneira ilustrada pela  \autoref{fig:diagramstacks}.
 
-\begin{figure}[htb]
+Toda comunicação entre a aplicação web e a API é realizada através de requisições HTTP, onde a aplicação web realiza requisições para a API, e a API responde com os dados solicitados, caso necessário a API busca as informações no banco de dados e retorna para a aplicação web.
+
+As requisições e respostas seguem o padrão REST, onde cada requisição possui um método HTTP, e um \textit{endpoint} que é a URL que identifica o recurso que está sendo solicitado. A resposta da requisição é um JSON, que contém os dados solicitados.
+
+\begin{figure}[H]
     \caption{\label{fig:diagramstacks}Disposição das tecnologias na arquitetura MVC}
     \begin{center}
         \includegraphics[scale=0.5]{imagens/diagrama.png}
@@ -30,15 +44,20 @@ A Arquitetura \textit{MVC} foi a escolhida para a estruturação do sistema, fic
     \legend{Fonte: Autor}
 \end{figure}
 
+Atuando na camada de modelo da aplicação, o banco de dados é responsável por armazenar os dados da aplicação e foi construido utilizando dois modelos principais para armazenamento não estruturado, o modelo evidenciado na \autoref{fig:diagrama-user} é utilizado para representar as informações referente aos usuários da aplicação.
 
-Toda comunicação entre a aplicação web e a API é realizada através de requisições HTTP, onde a aplicação web realiza requisições para a API, e a API responde com os dados solicitados, caso necessário a API busca as informações no banco de dados e retorna para a aplicação web.
+Enquanto o modelo representado na \autoref{fig:diagrama-armas} representa as informações referente as armas.
 
-As requisições e respostas seguem o padrão REST, onde cada requisição possui um método HTTP, e um \textit{endpoint} que é a URL que identifica o recurso que está sendo solicitado. A resposta da requisição é um JSON, que contém os dados solicitados.
 
-Atuando na camada de modelo da aplicação, o banco de dados é responsável por armazenar os dados da aplicação e foi construido utilizando dois modelos principais para armazenamento não estruturado, o primeiro modelo  representa as informações referente as armas de acordo com a \autoref{fig:diagrama-armas}.
-Já o segundo modelo evidenciado na \autoref{fig:diagrama-user} é utilizado para representar as informações referente aos usuários da aplicação.
+\begin{figure}[H]
+    \caption{\label{fig:diagrama-user}Diagrama da estrutura de usúario}
+    \begin{center}
+        \includegraphics[scale=1]{imagens/diagramaUser.png}
+    \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
 
-\begin{figure}[htb]
+\begin{figure}[H]
     \caption{\label{fig:diagrama-armas}Diagrama da estrutura de armas}
     \begin{center}
         \includegraphics[scale=0.82]{imagens/diagramaArma.png}
@@ -46,13 +65,7 @@ Já o segundo modelo evidenciado na \autoref{fig:diagrama-user} é utilizado par
     \legend{Fonte: Autor}
 \end{figure}
 
-\begin{figure}[htb]
-    \caption{\label{fig:diagrama-user}Diagrama da estrutura de usúario}
-    \begin{center}
-        \includegraphics[scale=1]{imagens/diagramaUser.png}
-    \end{center}
-    \legend{Fonte: Autor}
-\end{figure}
+
 
 
 
@@ -105,6 +118,23 @@ Esta é a página inicial da aplicação, a qual o usuário é direcionado assim
     \caption{\label{fig:tela-home}Autoform - Página inicial home}
     \begin{center}
         \includegraphics[scale=0.5]{imagens/home-autoform.png}
+    \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
+
+\subsection{Página de cadastros}
+Na página de cadastros, \autoref{fig:tela-cadastros-armas}, é possível visualizar os cadastros de armas que são armazenadas no banco de dados, também é possível realizar uma pesquisa.
+\begin{itemize}
+    \item Pesquisar: Neste campo é possível realizar uma pesquisa por uma arma específica, e caso seja encontrado o registro, o mesmo será exibido na tabela.
+    \item Alterar: Neste botão é possível alterar o registro de arma. Após a edição o registro é atualizado no banco de dados.
+    \item Excluir: Neste botão é possível excluir o registro de arma. Após a exclusão o registro é removido do banco de dados.
+    \item Cadastrar: Neste botão é possível cadastrar uma nova arma, onde será exibido um modal contendo um formulário para o usuário preencher os dados da arma. Após a confirmação o registro é inserido no banco de dados e uma mensagem de sucesso é exibida ao usuário.
+\end{itemize}
+
+\begin{figure}[H]
+    \caption{\label{fig:tela-cadastros-armas}Autoform - Cadastros}
+    \begin{center}
+        \includegraphics[scale=0.5]{imagens/autoform-cadastros.png}
     \end{center}
     \legend{Fonte: Autor}
 \end{figure}
@@ -178,23 +208,6 @@ Exemplo da ação executada após selecionar o botão gerar arquivo, que tem com
     \caption{\label{fig:tela-ael-gerado}Autoform - AEL gerado}
     \begin{center}
         \includegraphics[scale=0.5]{imagens/autoform-ael-gerado.png}
-    \end{center}
-    \legend{Fonte: Autor}
-\end{figure}
-
-\subsection{Página de cadastros}
-Nesta página é possível visualizar os cadastros de armas que são armazenadas no banco de dados, também é possível realizar uma pesquisa.
-\begin{itemize}
-    \item Pesquisar: Neste campo é possível realizar uma pesquisa por uma arma específica, e caso seja encontrado o registro, o mesmo será exibido na tabela.
-    \item Alterar: Neste botão é possível alterar o registro de arma. Após a edição o registro é atualizado no banco de dados.
-    \item Excluir: Neste botão é possível excluir o registro de arma. Após a exclusão o registro é removido do banco de dados.
-    \item Cadastrar: Neste botão é possível cadastrar uma nova arma, onde será exibido um modal contendo um formulário para o usuário preencher os dados da arma. Após a confirmação o registro é inserido no banco de dados e uma mensagem de sucesso é exibida ao usuário.
-\end{itemize}
-
-\begin{figure}[H]
-    \caption{\label{fig:tela-cadastros-armas}Autoform - Cadastros}
-    \begin{center}
-        \includegraphics[scale=0.5]{imagens/autoform-cadastros.png}
     \end{center}
     \legend{Fonte: Autor}
 \end{figure}
