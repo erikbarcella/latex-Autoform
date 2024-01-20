@@ -5,12 +5,12 @@ Neste capitulo é apresentado o desenvolvimento do projeto, onde são apresentad
 \section{Processo de produção}
 O projeto teve sua fase inicial, após o 1º encontro com o cliente Tiago Costa e o coorientador Márcio Lemos no \textit{campus} Osório do IFRS, na reunião foi demonstrada a necessidade pela BM RS de uma aplicação que pudesse ser utilizada para auxiliar no processo de registro do AEL no SIGMA, a fim de agilizar o processo de preenchimento e automatizar a geração do arquivo, bem como resolver outras dificuldades encontradas pelos operadores.
 Após a definição de contexto do AEL por parte da BM RS, foi realizado um estudo sobre o assunto, para que fosse possível entender o problema e propor uma solução viável e eficaz.
-Sendo demonstrado na  o fluxo desse processo e como a aplicação web AutoForm iria atuar.
+Sendo demonstrado na  \autoref{fig:diagramaBPMN} o fluxo desse processo e como a aplicação web AutoForm iria atuar.
 
-\begin{figure}[htb]
+\begin{figure}[H]
     \caption{\label{fig:diagramaBPMN}Diagrama de processo BPMN}
     \begin{center}
-        \includegraphics[scale=0.6]{imagens/FluxodeprocessoBPMN.jpeg}
+        \includegraphics[scale=0.50]{imagens/FluxodeprocessoBPMN.jpeg}
     \end{center}
     \legend{Fonte: Autor}
 \end{figure}
@@ -122,23 +122,6 @@ Na \autoref{fig:tela-home-inicio} é exibido a tela inicial da aplicação, a qu
     \legend{Fonte: Autor}
 \end{figure}
 
-\subsection{Página de cadastros}
-Na página de cadastros, \autoref{fig:tela-cadastros-armas}, é possível visualizar os cadastros de armas que são armazenadas no banco de dados, também é possível realizar uma pesquisa.
-\begin{itemize}
-    \item Pesquisar: Neste campo é possível realizar uma pesquisa por uma arma específica, e caso seja encontrado o registro, o mesmo será exibido na tabela.
-    \item Alterar: Neste botão é possível alterar o registro de arma. Após a edição o registro é atualizado no banco de dados.
-    \item Excluir: Neste botão é possível excluir o registro de arma. Após a exclusão o registro é removido do banco de dados.
-    \item Cadastrar: Neste botão é possível cadastrar uma nova arma, onde será exibido um modal contendo um formulário para o usuário preencher os dados da arma. Após a confirmação o registro é inserido no banco de dados e uma mensagem de sucesso é exibida ao usuário.
-\end{itemize}
-
-\begin{figure}[H]
-    \caption{\label{fig:tela-cadastros-armas}Autoform - Cadastros}
-    \begin{center}
-        \includegraphics[scale=0.45]{imagens/autoform-cadastros.png}
-    \end{center}
-    \legend{Fonte: Autor}
-\end{figure}
-
 \subsection{Página de criação de AEL}
 A página de criação de AEL, \autoref{fig:tela-ael1}, é responsável por realizar a criação de um registro e geração do AEL, sendo necessário informar os campos obrigatórios que constam no \autoref{sec:anexoA2} e \autoref{sec:anexoA3}.
 
@@ -198,7 +181,7 @@ Os botões da \autoref{fig:tela-ael4} tem as seguintes funcionalidades:
     Após uma caixa de pergunta é exibida ao usuário solicitando o nome do AEL e gera automaticamente o arquivo com base no nome inserido, realizando o download do arquivo AEL para o navegador do usuário que solicitou o recurso. 
     \item Limpar: Este botão exibe uma mensagem perguntando ao usuário se deseja limpar Nº linhas de registros contidos no armazenamento local do navegador.  Após confirmada a ação os registros temporários são apagados. 
     Esta opção foi implementada para garantir que após gerar o arquivo o usuário possa apagar os registros antigos para inserir novos. E também como garantia de segurança, limpando todos os dados do armazenamento temporário para  que não fique nenhuma informação sensível salva no navegador do usuário.
-    \item Cancelar: Esse botão tem como intuito apenas direcionar o usuário para a página inicial da aplicação a \autoref{fig:tela-home}, saindo da opção de criação de AEL sem acarretar na perca dos registros temporários já salvos.
+    \item Cancelar: Esse botão tem como intuito apenas direcionar o usuário para a página inicial da aplicação a \autoref{fig:tela-home-inicio}, saindo da opção de criação de AEL sem acarretar na perca dos registros temporários já salvos.
 \end{itemize}
 
 \subsection{Exemplo de AEL gerado}
@@ -211,6 +194,25 @@ Exemplo da ação executada após selecionar o botão gerar arquivo, que tem com
     \end{center}
     \legend{Fonte: Autor}
 \end{figure}
+
+
+\subsection{Página de cadastros}
+Na página de cadastros, \autoref{fig:tela-cadastros-armas}, é possível visualizar os cadastros de armas que são armazenadas no banco de dados, também é possível realizar uma pesquisa.
+\begin{itemize}
+    \item Pesquisar: Neste campo é possível realizar uma pesquisa por uma arma específica, e caso seja encontrado o registro, o mesmo será exibido na tabela.
+    \item Alterar: Neste botão é possível alterar o registro de arma. Após a edição o registro é atualizado no banco de dados.
+    \item Excluir: Neste botão é possível excluir o registro de arma. Após a exclusão o registro é removido do banco de dados.
+    \item Cadastrar: Neste botão é possível cadastrar uma nova arma, onde será exibido um modal contendo um formulário para o usuário preencher os dados da arma. Após a confirmação o registro é inserido no banco de dados e uma mensagem de sucesso é exibida ao usuário.
+\end{itemize}
+
+\begin{figure}[H]
+    \caption{\label{fig:tela-cadastros-armas}Autoform - Cadastros}
+    \begin{center}
+        \includegraphics[scale=0.45]{imagens/autoform-cadastros.png}
+    \end{center}
+    \legend{Fonte: Autor}
+\end{figure}
+
 
 \subsection{Página de administração de usuários}
 Esta página é acessível somente ao usuário com perfil de administrador.
